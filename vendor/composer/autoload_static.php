@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit90d3a05ccd9cbe47fab882deb8f85400
+class ComposerStaticInite7236e65fa7cb1d39581cc136dd3d1a4
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -14,6 +14,7 @@ class ComposerStaticInit90d3a05ccd9cbe47fab882deb8f85400
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
+        '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -28,11 +29,17 @@ class ComposerStaticInit90d3a05ccd9cbe47fab882deb8f85400
             'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Finder\\' => 25,
+            'Slim\\' => 5,
         ),
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
+            'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+        ),
+        'N' => 
+        array (
+            'Nico\\Pro1t\\' => 11,
         ),
         'J' => 
         array (
@@ -49,6 +56,10 @@ class ComposerStaticInit90d3a05ccd9cbe47fab882deb8f85400
             'Illuminate\\Container\\' => 21,
             'Illuminate\\Bus\\' => 15,
         ),
+        'F' => 
+        array (
+            'FastRoute\\' => 10,
+        ),
         'D' => 
         array (
             'Doctrine\\Inflector\\' => 19,
@@ -56,10 +67,6 @@ class ComposerStaticInit90d3a05ccd9cbe47fab882deb8f85400
         'C' => 
         array (
             'Carbon\\' => 7,
-        ),
-        2 => 
-        array (
-            '2daw\\ProyectoPhpBlade\\' => 22,
         ),
     );
 
@@ -88,13 +95,25 @@ class ComposerStaticInit90d3a05ccd9cbe47fab882deb8f85400
         array (
             0 => __DIR__ . '/..' . '/symfony/finder',
         ),
+        'Slim\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/slim/slim/Slim',
+        ),
         'Psr\\SimpleCache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
         ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Nico\\Pro1t\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Jenssegers\\Blade\\' => 
         array (
@@ -106,8 +125,8 @@ class ComposerStaticInit90d3a05ccd9cbe47fab882deb8f85400
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
-            1 => __DIR__ . '/..' . '/illuminate/collections',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
+            1 => __DIR__ . '/..' . '/illuminate/macroable',
             2 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Pipeline\\' => 
@@ -134,6 +153,10 @@ class ComposerStaticInit90d3a05ccd9cbe47fab882deb8f85400
         array (
             0 => __DIR__ . '/..' . '/illuminate/bus',
         ),
+        'FastRoute\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+        ),
         'Doctrine\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
@@ -142,9 +165,15 @@ class ComposerStaticInit90d3a05ccd9cbe47fab882deb8f85400
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
-        '2daw\\ProyectoPhpBlade\\' => 
+    );
+
+    public static $prefixesPsr0 = array (
+        'P' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            'Pimple' => 
+            array (
+                0 => __DIR__ . '/..' . '/pimple/pimple/src',
+            ),
         ),
     );
 
@@ -160,9 +189,10 @@ class ComposerStaticInit90d3a05ccd9cbe47fab882deb8f85400
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit90d3a05ccd9cbe47fab882deb8f85400::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit90d3a05ccd9cbe47fab882deb8f85400::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit90d3a05ccd9cbe47fab882deb8f85400::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInite7236e65fa7cb1d39581cc136dd3d1a4::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInite7236e65fa7cb1d39581cc136dd3d1a4::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInite7236e65fa7cb1d39581cc136dd3d1a4::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInite7236e65fa7cb1d39581cc136dd3d1a4::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -1,9 +1,15 @@
 <?php
-//Incluimos modelo
-require '../models/mostrar.php';
 
-$tareas = new Tareas();
-$mostrarTareas = $tareas->mostrarTareas();
+function mostrar(){
+    //Incluimos modelo
+    require('models/mostrar.php');
 
-//Incluimos vista
-include ('../views/listatareas.php');
+    $tareas = new Tareas();
+    $mostrarTareas = $tareas->mostrarTareas();
+    //Incluimos vista
+    //Pasamos a la vista toda la información que se desea representar
+    //include("app/views/tareas_mostrar.php");
+    echo $blade->render('listatareas', [
+        'mostrarTareas'=>$mostrarTareas        
+    ]);
+}
