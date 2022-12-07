@@ -29,40 +29,39 @@
     <br>
     <h1 style="text-align: center;">Añadir tarea</h1><br>
     <div id="formulario" >
-        <form action="../controllers/filtroAñadirTarea.php" method="post">
+        <form method="post">
+            DNI: <br> 
+            <input type="text" class="form-control" name="dni" ><br>
 
-            DNI: <?= $error->ErrorFormateado("dni") ?><br> 
-            <input type="text" class="form-control" name="dni" value="<?php echo $_POST['dni'] ?? '';?>"><br>
+            Nombre: 
+            <br><input type="text" class="form-control" name="nombre" ><br>
 
-            Nombre: <?= $error->ErrorFormateado("nombre") ?>
-            <br><input type="text" class="form-control" name="nombre" value="<?php echo $_POST['nombre'] ?? '';?>"><br>
+            Apellido: <br>
+            <input type="text" class="form-control" name="apellido" ><br>
 
-            Apellido: <?= $error->ErrorFormateado("apellido") ?><br>
-            <input type="text" class="form-control" name="apellido" value="<?php echo $_POST['apellido'] ?? '';?>"><br>
+            Correo Electronico: <br>
+            <input type="text" class="form-control" name="correo" ><br>
 
-            Correo Electronico: <?= $error->ErrorFormateado("correo") ?><br>
-            <input type="text" class="form-control" name="correo" value="<?php echo $_POST['correo'] ?? '';?>"><br>
+            Telefono: <br>
+            <input type="text" class="form-control" name="telefono" ><br>
 
-            Telefono: <?= $error->ErrorFormateado("telefono") ?><br>
-            <input type="text" class="form-control" name="telefono" value="<?php echo $_POST['telefono'] ?? '';?>"><br>
+            Direccion: <br>
+            <input type="text" class="form-control" name="direccion" ><br>
 
-            Direccion: <?= $error->ErrorFormateado("direccion") ?><br>
-            <input type="text" class="form-control" name="direccion" value="<?php echo $_POST['direccion'] ?? '';?>"><br>
+            Poblacion: <br>
+            <input type="text" class="form-control" name="poblacion" ><br>
 
-            Poblacion: <?= $error->ErrorFormateado("poblacion") ?><br>
-            <input type="text" class="form-control" name="poblacion" value="<?php echo $_POST['poblacion'] ?? '';?>"><br>
+            Codigo Postal: <br>
+            <input type="text" class="form-control" name="codigop" ><br>
 
-            Codigo Postal: <?= $error->ErrorFormateado("codigop") ?><br>
-            <input type="text" class="form-control" name="codigop" value="<?php echo $_POST['codigop'] ?? '';?>"><br>
-
-            Provincia: <?= $error->ErrorFormateado("provincia") ?><br>
+            Provincia: <br>
             <select class="form-select" name="provincia">
                 <option disabled selected>Selecciona</option>
-                <?php mostrarProvincias()?>
+                <option> Huelva</option>
             </select><br>
             <!-- FECHA DE CREACION AUTOMATICA?-->
             <!-- Los operarios los cojeremos de la BBDD o otro lugar.-->
-            Operario encargado: <?= $error->ErrorFormateado("operario") ?><br>
+            Operario encargado: <br>
             <select class="form-select" name="operario">
                 <option disabled selected>Selecciona</option>
                 <option>Marc</option>
@@ -72,15 +71,14 @@
                 <option>David</option>
             </select><br>
 
-            Fecha: <?= $error->ErrorFormateado("fecha") ?><br>
+            Fecha: <br>
             <input type="date" class="form-control" name="fecha"><br>
 
-            Descripcion: <?= $error->ErrorFormateado("descripcion") ?><br>
+            Descripcion: <br>
             <textarea class="form-control" name="descripcion"></textarea>
 
             <button type="submit" class="btn btn-primary">Añadir</button>
         </form>
     </div>
 </body>
-
-</html>
+</html><?php /**PATH C:\Users\marcc\OneDrive\Escritorio\ProyectoPHP_blade\app\views/añadirTarea.blade.php ENDPATH**/ ?>

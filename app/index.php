@@ -1,15 +1,18 @@
 <?php
+
 //La carpeta donde buscaremos los controladores
 define ('CONTROLLERS_FOLDER', "controllers/");
 
 //Si no se indica un controlador, este es el controlador que se usará
-define ('DEFAULT_CONTROLLER', "mostrarControlador");
+define ('DEFAULT_CONTROLLER', "tareasController");
 
  //Si no se indica una acción, esta acción es la que se usará
-define ('DEFAULT_ACTION', "mostrar");
+define ('DEFAULT_ACTION', "login");
 
 //Obtenemos el controlador.
 //Si el usuario no lo introduce, seleccionamos el de por defecto.
+
+
 $controller = DEFAULT_CONTROLLER;
 if ( !empty ( $_GET[ 'controller' ] ) )
    $controller = $_GET [ 'controller' ];
