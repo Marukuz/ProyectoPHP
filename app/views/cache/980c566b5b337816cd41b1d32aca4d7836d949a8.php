@@ -38,23 +38,23 @@
           <th scope="col">Fecha de realizacion</th>
         </tr>
       </thead>
-          @foreach($mostrarTareas as $tareas) 
+          <?php $__currentLoopData = $mostrarTareas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tareas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
         <tr>
-          <td>{{ $tareas['tarea_id'] }}</td>
-          <td>{{ $tareas['nombre'] }}</td>
-          <td>{{ $tareas['apellido'] }}</td>
-          <td>{{ $tareas['telefono'] }}</td>
-          <td>{{ $tareas['poblacion'] }}</td>
-          <td>{{ $tareas['provincia'] }}</td>
-          <td>{{ $tareas['estado_tarea'] }}</td>
-          <td>{{ $tareas['anotacion_inicio'] }}</td>
-          <td>{{ $tareas['fecha_realizacion'] }}</td>
+          <td><?php echo e($tareas['tarea_id']); ?></td>
+          <td><?php echo e($tareas['nombre']); ?></td>
+          <td><?php echo e($tareas['apellido']); ?></td>
+          <td><?php echo e($tareas['telefono']); ?></td>
+          <td><?php echo e($tareas['poblacion']); ?></td>
+          <td><?php echo e($tareas['provincia']); ?></td>
+          <td><?php echo e($tareas['estado_tarea']); ?></td>
+          <td><?php echo e($tareas['anotacion_inicio']); ?></td>
+          <td><?php echo e($tareas['fecha_realizacion']); ?></td>
         </tr>
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
       <tbody>
       <tr>
       </tbody>
     </table>
   </div>
 </body>
-</html>
+</html><?php /**PATH C:\Users\2DAW\Desktop\ProyectoPHP_blade\app\views/listatareas.blade.php ENDPATH**/ ?>
