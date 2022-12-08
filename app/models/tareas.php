@@ -3,7 +3,7 @@ require 'conexionPDO.php';
 
 class Tareas{
 
-    public function mostrarTareas() {
+    public static function mostrarTareas() {
         $base = Conexion::getInstance();
         $sql ="SELECT tarea_id, nombre, apellido, telefono, poblacion, provincia, estado_tarea, descripcion, anotacion_inicio, fecha_realizacion FROM tareas ORDER BY fecha_realizacion";
         $result = $base->base->prepare($sql);
@@ -14,7 +14,7 @@ class Tareas{
         }
         return $tareas;
     }   
-    public function añadirTarea($dni,$nombre,$apellido,$correo,$telefono,$direccion,$poblacion,$codigop,$provincia,$operario,$fecha,$descripcion,$anotacioni){
+    public static function añadirTarea($dni,$nombre,$apellido,$correo,$telefono,$direccion,$poblacion,$codigop,$provincia,$operario,$fecha,$descripcion,$anotacioni){
         $base = Conexion::getInstance();
         $fechaactual = strval(date('Y-m-d'));
         $sql = "INSERT INTO tareas (`tarea_id`, `dni`, `nombre`, `apellido`, `telefono`, `correo`, `direccion`, `poblacion`, `codigo_postal`, `provincia`, `estado_tarea`, `fecha_creacion`, `operario_encargado`,`fecha_realizacion`,`descripcion`,`anotacion_inicio`,`anotacion_final`) 
@@ -22,15 +22,26 @@ class Tareas{
         $result = $base ->base->prepare($sql);
         $result -> execute();
     }
-    public function mostrarTareaID($id){
+    public static function mostrarTareaID($id){
         $base = Conexion::getInstance();
         $sql="SELECT * FROM tareas WHERE tarea_id='$id'";
-        $result =$base->prepare($sql);
+        $result = $base->base->prepare($sql);
         $result -> execute();
         $tareas = [];
         while($tarea = $result->fetch()){
             $tareas[] = $tarea;
         }
         return $tareas;
+    }
+    public static function mostrarProvincias(){
+        $base = Conexion::getInstance();
+        $sql="SELECT * FROM tbl_provincias";
+        $result = $base->base->prepare($sql);
+        $result -> execute();
+        $provincias = [];
+        while($provincia = $result->fetch(PDO::FETCH_ASSOC)){
+                $provincias[] = $provincia;
+           }
+        return $provincias;
     }
 }

@@ -25,7 +25,7 @@ function test(){
     require('models/tareas.php');
     include('models/blade.php');
 
-    echo $blade->render('test');
+    echo $blade->render('opciones');
 }
 
 function añadirTarea(){
@@ -34,27 +34,27 @@ function añadirTarea(){
     include('models/blade.php');
     require('models/gestorerrores.php');
     require('validaciones.php');
-
     //FILTRADO 
+    
+    $provincias = Tareas::mostrarProvincias();
+
     $error=new GestorErrores('<span style="color: red;">','</span>');
     if($_POST){
         $error = Validaciones::filtradoCadena($error,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
         $tareas = [];
         array_push($tareas,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
         if(!$error->HayErrores()){
-            $tareas = new Tareas();
-            $tareas->añadirTarea($_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],$_POST["provincia"],$_POST["operario"],$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
+            Tareas::añadirTarea($_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],$_POST["provincia"],$_POST["operario"],$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
         }else{
             echo $blade -> render('añadirTarea', [
-                'error'=>$error, 'tareas'=>$tareas
+                'error'=>$error, 'tareas'=>$tareas, 'provincias'=>$provincias
             ]);
         }
     }else{
         echo $blade -> render('añadirTarea', [
-            'error'=>$error
+            'error'=>$error,'provincias'=>$provincias
         ]);
     }
-    
 }
 
 function modificarTarea(){
