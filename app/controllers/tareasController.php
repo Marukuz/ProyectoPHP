@@ -20,13 +20,21 @@ function mostrarTarea(){
     ]);
 }
 
+
+function test(){
+    require('models/tareas.php');
+    include('models/blade.php');
+
+    echo $blade->render('test');
+}
+
 function añadirTarea(){
     //Incluimos modelo
     require('models/tareas.php');
     include('models/blade.php');
     require('models/gestorerrores.php');
     require('validaciones.php');
-    
+
     //FILTRADO 
     $error=new GestorErrores('<span style="color: red;">','</span>');
     if($_POST){

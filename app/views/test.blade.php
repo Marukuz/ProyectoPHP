@@ -1,2 +1,3 @@
 @include('header')
-<h1>HOLA</h1>
+
+<h1>TEST</h1>

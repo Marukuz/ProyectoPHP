@@ -7,7 +7,7 @@ define ('CONTROLLERS_FOLDER', "controllers/");
 define ('DEFAULT_CONTROLLER', "tareasController");
 
  //Si no se indica una acción, esta acción es la que se usará
-define ('DEFAULT_ACTION', "añadirTarea");
+define ('DEFAULT_ACTION', "test");
 
 //Obtenemos el controlador.
 //Si el usuario no lo introduce, seleccionamos el de por defecto.
