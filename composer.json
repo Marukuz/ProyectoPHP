@@ -2,8 +2,7 @@
     "name": "2daw/proyecto-php_blade",
     "type": "project",
     "require": {
-        "jenssegers/blade": "^1.4",
-        "slim/slim": "4.*"
+        "jenssegers/blade": "^1.4"
     },
     "autoload": {
         "psr-4": {

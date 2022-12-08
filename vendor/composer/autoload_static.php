@@ -34,10 +34,12 @@ class ComposerStaticInite7236e65fa7cb1d39581cc136dd3d1a4
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
-            'Psr\\Log\\' => 8,
-            'Psr\\Http\\Server\\' => 16,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+        ),
+        'N' => 
+        array (
+            'Nico\\Pro1t\\' => 11,
         ),
         'J' => 
         array (
@@ -65,10 +67,6 @@ class ComposerStaticInite7236e65fa7cb1d39581cc136dd3d1a4
         'C' => 
         array (
             'Carbon\\' => 7,
-        ),
-        2 => 
-        array (
-            '2daw\\ProyectoPhpBlade\\' => 22,
         ),
     );
 
@@ -105,23 +103,17 @@ class ComposerStaticInite7236e65fa7cb1d39581cc136dd3d1a4
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
         ),
-        'Psr\\Log\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/log/src',
-        ),
-        'Psr\\Http\\Server\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-server-handler/src',
-            1 => __DIR__ . '/..' . '/psr/http-server-middleware/src',
-        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Nico\\Pro1t\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Jenssegers\\Blade\\' => 
         array (
@@ -173,9 +165,15 @@ class ComposerStaticInite7236e65fa7cb1d39581cc136dd3d1a4
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
-        '2daw\\ProyectoPhpBlade\\' => 
+    );
+
+    public static $prefixesPsr0 = array (
+        'P' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            'Pimple' => 
+            array (
+                0 => __DIR__ . '/..' . '/pimple/pimple/src',
+            ),
         ),
     );
 
@@ -193,6 +191,7 @@ class ComposerStaticInite7236e65fa7cb1d39581cc136dd3d1a4
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInite7236e65fa7cb1d39581cc136dd3d1a4::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInite7236e65fa7cb1d39581cc136dd3d1a4::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInite7236e65fa7cb1d39581cc136dd3d1a4::$prefixesPsr0;
             $loader->classMap = ComposerStaticInite7236e65fa7cb1d39581cc136dd3d1a4::$classMap;
 
         }, null, ClassLoader::class);
