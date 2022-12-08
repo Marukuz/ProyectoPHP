@@ -30,38 +30,39 @@
     <h1 style="text-align: center;">Añadir tarea</h1><br>
     <div id="formulario" >
         <form method="post">
-            DNI: <br> 
-            <input type="text" class="form-control" name="dni" ><br>
+            DNI: <?php echo $error->ErrorFormateado("dni"); ?> <br> 
+            <input type="text" class="form-control" name="dni" value="<?php echo e($tareas[0] ?? ''); ?>"><br>
 
-            Nombre: 
-            <br><input type="text" class="form-control" name="nombre" ><br>
+            Nombre: <?php echo $error->ErrorFormateado("nombre"); ?>
 
-            Apellido: <br>
-            <input type="text" class="form-control" name="apellido" ><br>
+            <br><input type="text" class="form-control" name="nombre" value="<?php echo e($tareas[1] ?? ''); ?>" ><br>
 
-            Correo Electronico: <br>
-            <input type="text" class="form-control" name="correo" ><br>
+            Apellido: <?php echo $error->ErrorFormateado("apellido"); ?><br>
+            <input type="text" class="form-control" name="apellido" value="<?php echo e($tareas[2] ?? ''); ?>"><br>
 
-            Telefono: <br>
-            <input type="text" class="form-control" name="telefono" ><br>
+            Correo Electronico: <?php echo $error->ErrorFormateado("correo"); ?><br>
+            <input type="text" class="form-control" name="correo" value="<?php echo e($tareas[3] ?? ''); ?>"><br>
 
-            Direccion: <br>
-            <input type="text" class="form-control" name="direccion" ><br>
+            Telefono: <?php echo $error->ErrorFormateado("telefono"); ?><br>
+            <input type="text" class="form-control" name="telefono" value="<?php echo e($tareas[4] ?? ''); ?>"><br>
 
-            Poblacion: <br>
-            <input type="text" class="form-control" name="poblacion" ><br>
+            Direccion: <?php echo $error->ErrorFormateado("direccion"); ?><br>
+            <input type="text" class="form-control" name="direccion" value="<?php echo e($tareas[5] ?? ''); ?>"><br>
 
-            Codigo Postal: <br>
-            <input type="text" class="form-control" name="codigop" ><br>
+            Poblacion: <?php echo $error->ErrorFormateado("poblacion"); ?><br>
+            <input type="text" class="form-control" name="poblacion" value="<?php echo e($tareas[6] ?? ''); ?>" ><br>
 
-            Provincia: <br>
+            Codigo Postal: <?php echo $error->ErrorFormateado("codigop"); ?><br>
+            <input type="text" class="form-control" name="codigop" value="<?php echo e($tareas[7] ?? ''); ?>"><br>
+
+            Provincia: <?php echo $error->ErrorFormateado("provincia"); ?><br>
             <select class="form-select" name="provincia">
                 <option disabled selected>Selecciona</option>
                 <option> Huelva</option>
             </select><br>
             <!-- FECHA DE CREACION AUTOMATICA?-->
             <!-- Los operarios los cojeremos de la BBDD o otro lugar.-->
-            Operario encargado: <br>
+            Operario encargado: <?php echo $error->ErrorFormateado("operario"); ?><br>
             <select class="form-select" name="operario">
                 <option disabled selected>Selecciona</option>
                 <option>Marc</option>
@@ -71,12 +72,14 @@
                 <option>David</option>
             </select><br>
 
-            Fecha: <br>
-            <input type="date" class="form-control" name="fecha"><br>
+            Fecha: <?php echo $error->ErrorFormateado("fecha"); ?><br>
+            <input type="date" class="form-control" name="fecha" value="<?php echo e($tareas[10] ?? ''); ?>"><br>
 
-            Descripcion: <br>
-            <textarea class="form-control" name="descripcion"></textarea>
-
+            Descripcion: <?php echo $error->ErrorFormateado("descripcion"); ?><br>
+            <textarea class="form-control" name="descripcion" value="<?php echo e($tareas[11] ?? ''); ?>"></textarea>
+            Anotacion Inicial: <?php echo $error->ErrorFormateado("anotacioni"); ?><br>
+            <textarea class="form-control" name="anotacioni" value="<?php echo e($tareas[12] ?? ''); ?>"></textarea>
+            
             <button type="submit" class="btn btn-primary">Añadir</button>
         </form>
     </div>

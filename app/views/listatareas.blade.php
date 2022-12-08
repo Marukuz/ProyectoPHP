@@ -35,6 +35,7 @@
           <th scope="col">Provincia</th>
           <th scope="col">Estado</th>
           <th scope="col">Descripcion</th>
+          <th scope="col">Anotacion Inicial</th>
           <th scope="col">Fecha de realizacion</th>
         </tr>
       </thead>
@@ -47,6 +48,7 @@
           <td>{{ $tareas['poblacion'] }}</td>
           <td>{{ $tareas['provincia'] }}</td>
           <td>{{ $tareas['estado_tarea'] }}</td>
+          <td>{{ $tareas['descripcion'] }}</td>
           <td>{{ $tareas['anotacion_inicio'] }}</td>
           <td>{{ $tareas['fecha_realizacion'] }}</td>
         </tr>

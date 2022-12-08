@@ -35,6 +35,7 @@
           <th scope="col">Provincia</th>
           <th scope="col">Estado</th>
           <th scope="col">Descripcion</th>
+          <th scope="col">Anotacion Inicial</th>
           <th scope="col">Fecha de realizacion</th>
         </tr>
       </thead>
@@ -47,6 +48,7 @@
           <td><?php echo e($tareas['poblacion']); ?></td>
           <td><?php echo e($tareas['provincia']); ?></td>
           <td><?php echo e($tareas['estado_tarea']); ?></td>
+          <td><?php echo e($tareas['descripcion']); ?></td>
           <td><?php echo e($tareas['anotacion_inicio']); ?></td>
           <td><?php echo e($tareas['fecha_realizacion']); ?></td>
         </tr>

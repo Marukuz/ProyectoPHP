@@ -27,7 +27,7 @@
     <br>
     <h1 style="text-align: center;">Modificar tarea</h1><br>
     <div id="formulario" >
-        <form action="../controllers/modificarTarea.php" method="post">
+        <form method="post">
         Introduce el ID de la tarea:
             <input type="text" class="form-control" name="id"><br>
             <button type="submit" class="btn btn-primary">Introducir</button>
