@@ -15,7 +15,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link" href="../views/listatareas.php">Ver lista</a>
-                    <a class="nav-link active" href="../controllers/filtroAñadirTarea.php">Añadir tarea</a>
+                    <a class="nav-link" href="../controllers/filtroAñadirTarea.php">Añadir tarea</a>
                     <a class="nav-link" href="../controllers/modificarTarea.php">Modificar tarea</a>
                     <a class="nav-link" href="#">Eliminar tarea</a>
                     <a class="nav-link" href="#">Cambiar estado</a>
