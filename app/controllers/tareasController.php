@@ -11,9 +11,8 @@ function login(){
 function mostrarTarea(){
     //Incluimos modelo
     require('models/tareas.php');
-    include('models/blade.php');
-    $tareas = new Tareas();
-    $mostrarTareas = $tareas->mostrarTareas();
+    require('models/blade.php');
+    $mostrarTareas = Tareas::mostrarTareas();
     //Incluimos vista
     echo $blade->render('listatareas', [
         'mostrarTareas'=>$mostrarTareas        
@@ -23,7 +22,7 @@ function mostrarTarea(){
 
 function test(){
     require('models/tareas.php');
-    include('models/blade.php');
+    require('models/blade.php');
 
     echo $blade->render('opciones');
 }
@@ -31,11 +30,11 @@ function test(){
 function añadirTarea(){
     //Incluimos modelo
     require('models/tareas.php');
-    include('models/blade.php');
+    require('models/blade.php');
     require('models/gestorerrores.php');
     require('validaciones.php');
     //FILTRADO 
-    
+
     $provincias = Tareas::mostrarProvincias();
 
     $error=new GestorErrores('<span style="color: red;">','</span>');
@@ -59,7 +58,7 @@ function añadirTarea(){
 
 function modificarTarea(){
     require('models/tareas.php');
-    include('models/blade.php');
+    require('models/blade.php');
 
     if($_POST){
         echo $blade -> render('modificarTarea');
