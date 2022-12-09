@@ -1,5 +1,5 @@
 <?php
-require 'conexionPDO.php';
+require_once 'conexionPDO.php';
 
 class Tareas{
 
@@ -47,7 +47,7 @@ class Tareas{
            }
         return $provincias;
     }
-    
+
     public static function paginacion($numero){
         $base = Conexion::getInstance();
         $sql ="SELECT COUNT(*) AS tareas_totales FROM tareas";
