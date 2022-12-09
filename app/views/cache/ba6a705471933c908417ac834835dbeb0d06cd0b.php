@@ -1,12 +1,5 @@
 
-<?php $__env->startSection('contenido'); ?>
-    <style>
-        #formulario{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-    </style>
+<?php $__env->startSection('contenido'); ?>   
     <br>
     <h1 style="text-align: center;">Añadir tarea</h1><br>
     <div id="formulario" >

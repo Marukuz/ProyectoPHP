@@ -43,12 +43,14 @@ class Tareas{
         $result = $base ->base->prepare($sql);
         $result -> execute();
     }
-    public static function modificarTarea($id,$dni,$nombre,$apellido,$telefono,$correo,$direccion,$poblacion,$codigop,$provincia,$estado,$fecha_creacion,$operario,$fecha_realizacion,$descripcion,$anotacioni,$anotacionf){
+
+    public static function modificarTarea($id,$dni,$nombre,$apellido,$telefono,$correo,$direccion,$poblacion,$codigop,$provincia,$estado,$operario,$fecha_realizacion,$descripcion,$anotacioni,$anotacionf){
         $base = Conexion::getInstance();
-        $sql="UPDATE tareas SET tarea_id = '$id', dni='$dni', nombre='$nombre', apellido='$apellido', telefono='$telefono', correo='$correo', direccion='$direccion', poblacion='$poblacion', codigo_postal='$codigop', provincia='$provincia', estado_tarea='$estado', fecha_creacion='$fecha_creacion', operario_encargado='$operario', fecha_realizacion='$fecha_realizacion',descripcion='$descripcion', anotacion_inicio='$anotacioni', anotacion_final='$anotacionf' WHERE tarea_id='$id'";
-        $result =$base->prepare($sql);
+        $sql="UPDATE tareas SET tarea_id='$id', dni='$dni', nombre='$nombre', apellido='$apellido', telefono='$telefono', correo='$correo', direccion='$direccion', poblacion='$poblacion', codigo_postal='$codigop', provincia='$provincia', estado_tarea='$estado', operario_encargado='$operario', fecha_realizacion='$fecha_realizacion',descripcion='$descripcion', anotacion_inicio='$anotacioni', anotacion_final='$anotacionf' WHERE tarea_id='$id'";
+        $result =$base->base->prepare($sql);
         $result -> execute();
     }
+    
     public static function mostrarTareaID($id){
         $base = Conexion::getInstance();
         $sql="SELECT * FROM tareas WHERE tarea_id='$id'";

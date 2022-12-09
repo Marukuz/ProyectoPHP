@@ -39,14 +39,36 @@ function mostrarTareaCompleta(){
 function modificarTarea(){
     require('models/tareas.php');
     require('models/blade.php');
+    require('models/gestorerrores.php');
+    require('validaciones.php');
 
-    $provincias = Tareas::mostrarProvincias();
     $id = $_GET['id'];
     $tarea = Tareas::mostrarTareaCompleta($id);
 
-    echo $blade->render('modificarTarea', [
-        'tarea'=>$tarea,'provincias'=>$provincias
-    ]);
+    $error=new GestorErrores('<span style="color: red;">','</span>');
+
+    $provincias = Tareas::mostrarProvincias();
+
+    if($_POST){
+        $error = Validaciones::filtradoTareas($error,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
+        $tareas = [];
+        array_push($tareas,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"],$_POST["anotacionf"]);
+        if(!$error->HayErrores() == 0){
+            Tareas::modificarTarea($_POST["id"],$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["telefono"],$_POST["correo"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),$_POST["estado"],filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"],$_POST["anotacionf"]);
+            echo $blade -> render('modificarTarea', [
+                'error'=>$error, 'tareas'=>$tareas, 'provincias'=>$provincias,'tarea'=>$tarea
+            ]);
+        }else{
+            echo $blade -> render('modificarTarea', [
+                'error'=>$error, 'tareas'=>$tareas, 'provincias'=>$provincias, 'tarea'=>$tarea
+            ]);
+        }
+    }else{
+        echo $blade->render('modificarTarea', [
+            'tarea'=>$tarea,'provincias'=>$provincias,'error'=>$error
+        ]);
+    }
+    
 }
 function test(){
     require('models/tareas.php');
@@ -68,11 +90,11 @@ function añadirTarea(){
     $error=new GestorErrores('<span style="color: red;">','</span>');
 
     if($_POST){
-        $error = Validaciones::filtradoErrores($error,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
+        $error = Validaciones::filtradoTareas($error,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
         $tareas = [];
         array_push($tareas,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
         if(!$error->HayErrores()){
-            Tareas::añadirTarea($_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],$_POST["provincia"],$_POST["operario"],$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
+            Tareas::añadirTarea($_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
             echo $blade -> render('añadirTarea', [
                 'error'=>$error, 'tareas'=>$tareas, 'provincias'=>$provincias
             ]);

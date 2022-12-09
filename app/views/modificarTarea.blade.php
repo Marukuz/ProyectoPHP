@@ -4,31 +4,31 @@
     <div id="formulario" >
         <form method="post">
             ID Tarea: <br>
-            <input type="text" class="form-control" name="id" value="{{$tarea['tarea_id']}}" disabled><br>
+            <input type="text" class="form-control" name="id" value="{{$tarea['tarea_id'] ?? ''}}" readonly><br>
 
-            DNI: <br>
-            <input type="text" class="form-control" name="dni" value="{{$tarea['dni']}}"><br>
+            DNI: {!!$error->ErrorFormateado("dni")!!} <br>
+            <input type="text" class="form-control" name="dni" value="{{$tarea['dni'] ?? ''}}"><br>
 
             Nombre: <br>
-            <input type="text" class="form-control" name="nombre" value="{{$tarea['nombre']}}"><br>
+            <input type="text" class="form-control" name="nombre" value="{{$tarea['nombre'] ?? ''}}"><br>
 
             Apellido: <br>
-            <input type="text" class="form-control" name="apellido" value="{{$tarea['apellido']}}"><br>
+            <input type="text" class="form-control" name="apellido" value="{{$tarea['apellido'] ?? ''}}"><br>
 
             Telefono: <br>
-            <input type="text" class="form-control" name="telefono" value="{{$tarea['telefono']}}"><br>
+            <input type="text" class="form-control" name="telefono" value="{{$tarea['telefono'] ?? ''}}"><br>
 
             Correo Electronico: <br>
-            <input type="text" class="form-control" name="correo" value="{{$tarea['correo']}}"><br>
+            <input type="text" class="form-control" name="correo" value="{{$tarea['correo'] ?? ''}}"><br>
 
             Direccion: <br>
-            <input type="text" class="form-control" name="direccion" value="{{$tarea['direccion']}}"><br>
+            <input type="text" class="form-control" name="direccion" value="{{$tarea['direccion'] ?? ''}}"><br>
 
             Poblacion: <br>
-            <input type="text" class="form-control" name="poblacion" value="{{$tarea['poblacion']}}"><br>
+            <input type="text" class="form-control" name="poblacion" value="{{$tarea['poblacion'] ?? ''}}"><br>
 
             Codigo Postal: <br>
-            <input type="text" class="form-control" name="codigop" value="{{$tarea['codigo_postal']}}"><br>
+            <input type="text" class="form-control" name="codigop" value="{{$tarea['codigo_postal'] ?? ''}}"><br>
 
             Provincia: <br>
             <select class="form-select" name="provincia" >
@@ -39,10 +39,10 @@
             </select><br>
 
             Estado Tarea: <br>
-            <input type="text" class="form-control" name="estado" value="{{$tarea['estado_tarea']}}"><br>
+            <input type="text" class="form-control" name="estado" value="{{$tarea['estado_tarea'] ?? ''}}"><br>
 
             Fecha creacion: <br>
-            <input type="date" class="form-control" name="fechac" value="{{$tarea['fecha_creacion']}}"><br>
+            <input type="date" class="form-control" name="fechac" value="{{$tarea['fecha_creacion'] ?? ''}}" readonly><br>
 
             Operario encargado: <br>
             <select class="form-select" name="operario">
@@ -55,16 +55,16 @@
             </select><br>
 
             Fecha Realizacion: <br>
-            <input type="date" class="form-control" name="fecha"  value="{{$tarea['fecha_realizacion']}}"><br>
+            <input type="date" class="form-control" name="fecha"  value="{{$tarea['fecha_realizacion'] ?? ''}}"><br>
 
             Descripcion: <br>
             <textarea class="form-control" name="descripcion">{{$tarea['descripcion']}}</textarea>
 
             Anotacion inicial: <br>
-            <textarea class="form-control" name="anotacion_inicial" >{{$tarea['anotacion_inicio'] }}</textarea>
+            <textarea class="form-control" name="anotacioni" >{{$tarea['anotacion_inicio'] }}</textarea>
 
             Anotacion final: <br>
-            <textarea class="form-control" name="anotacion_final" >{{$tarea['anotacion_final']}}</textarea>
+            <textarea class="form-control" name="anotacionf" >{{$tarea['anotacion_final']}}</textarea>
 
             <button type="submit" class="btn btn-primary">Modificar</button>
         </form>

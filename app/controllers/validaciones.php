@@ -71,7 +71,7 @@ class Validaciones
             return false;
         }
     }
-    public static function filtradoErrores($error,$dni,$nombre,$apellido,$correo,$telefono,$direccion,$poblacion,$codigop,$provincia,$operario,$fecha,$descripcion,$anotacioni){
+    public static function filtradoTareas($error,$dni,$nombre,$apellido,$correo,$telefono,$direccion,$poblacion,$codigop,$provincia,$operario,$fecha,$descripcion,$anotacioni){
     
         if(self::validarVacio($dni)){
             $error->AnotaError('dni','No has introducido un dni');
