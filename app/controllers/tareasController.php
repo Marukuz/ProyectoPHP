@@ -1,4 +1,5 @@
 <?php
+
 function login(){
     require('models/blade.php');
     echo $blade->render('login');
@@ -35,7 +36,18 @@ function mostrarTareaCompleta(){
         'mostrarTareaCompleta'=>$mostrarTareaCompleta       
     ]);
 }
+function modificarTarea(){
+    require('models/tareas.php');
+    require('models/blade.php');
 
+    $provincias = Tareas::mostrarProvincias();
+    $id = $_GET['id'];
+    $tarea = Tareas::mostrarTareaCompleta($id);
+
+    echo $blade->render('modificarTarea', [
+        'tarea'=>$tarea,'provincias'=>$provincias
+    ]);
+}
 function test(){
     require('models/tareas.php');
     require('models/blade.php');
@@ -56,7 +68,7 @@ function añadirTarea(){
     $error=new GestorErrores('<span style="color: red;">','</span>');
 
     if($_POST){
-        $error = Validaciones::filtradoCadena($error,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
+        $error = Validaciones::filtradoErrores($error,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
         $tareas = [];
         array_push($tareas,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
         if(!$error->HayErrores()){
@@ -73,17 +85,6 @@ function añadirTarea(){
         echo $blade -> render('añadirTarea', [
             'error'=>$error,'provincias'=>$provincias
         ]);
-    }
-}
-
-function modificarTarea(){
-    require('models/tareas.php');
-    require('models/blade.php');
-
-    if($_POST){
-        echo $blade -> render('modificarTarea');
-    }else{
-        echo $blade -> render('modificarTareaID');
     }
 }
 

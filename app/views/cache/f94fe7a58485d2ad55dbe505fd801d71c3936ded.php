@@ -31,7 +31,7 @@
           <td><?php echo e($tareas['anotacion_inicio']); ?></td>
           <td><?php echo e($tareas['fecha_realizacion']); ?></td>
           <td><a href="index.php?controller=tareasController&action=mostrarTareaCompleta&id=<?php echo e($tareas['tarea_id']); ?>"><button>Ver</button></a>
-          <a href="index.php?controller=tareasController&action=mostrarTareaCompleta&id=<?php echo e($tareas['tarea_id']); ?>"><button>Modificar</button></td>
+          <a href="index.php?controller=tareasController&action=modificarTarea&id=<?php echo e($tareas['tarea_id']); ?>"><button>Modificar</button></td>
         </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
       <tbody>

@@ -25,27 +25,25 @@
       </tr>
     </thead>
     <tbody>
-    <?php $__currentLoopData = $mostrarTareaCompleta; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tareas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
         <tr>
-          <td><?php echo e($tareas['tarea_id']); ?></td>
-          <td><?php echo e($tareas['dni']); ?></td>
-          <td><?php echo e($tareas['nombre']); ?></td>
-          <td><?php echo e($tareas['apellido']); ?></td>
-          <td><?php echo e($tareas['telefono']); ?></td>
-          <td><?php echo e($tareas['correo']); ?></td>
-          <td><?php echo e($tareas['direccion']); ?></td>
-          <td><?php echo e($tareas['poblacion']); ?></td>
-          <td><?php echo e($tareas['codigo_postal']); ?></td>
-          <td><?php echo e($tareas['provincia']); ?></td>
-          <td><?php echo e($tareas['estado_tarea']); ?></td>
-          <td><?php echo e($tareas['fecha_creacion']); ?></td>
-          <td><?php echo e($tareas['operario_encargado']); ?></td>
-          <td><?php echo e($tareas['fecha_realizacion']); ?></td>
-          <td><?php echo e($tareas['descripcion']); ?></td>
-          <td><?php echo e($tareas['anotacion_inicio']); ?></td>
-          <td><?php echo e($tareas['anotacion_final']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['tarea_id']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['dni']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['nombre']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['apellido']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['telefono']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['correo']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['direccion']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['poblacion']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['codigo_postal']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['provincia']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['estado_tarea']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['fecha_creacion']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['operario_encargado']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['fecha_realizacion']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['descripcion']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['anotacion_inicio']); ?></td>
+          <td><?php echo e($mostrarTareaCompleta['anotacion_final']); ?></td>
         </tr>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </tbody>
   </table>
 </div>

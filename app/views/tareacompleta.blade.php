@@ -25,27 +25,25 @@
       </tr>
     </thead>
     <tbody>
-    @foreach($mostrarTareaCompleta as $tareas) 
         <tr>
-          <td>{{ $tareas['tarea_id'] }}</td>
-          <td>{{ $tareas['dni'] }}</td>
-          <td>{{ $tareas['nombre'] }}</td>
-          <td>{{ $tareas['apellido'] }}</td>
-          <td>{{ $tareas['telefono'] }}</td>
-          <td>{{ $tareas['correo'] }}</td>
-          <td>{{ $tareas['direccion'] }}</td>
-          <td>{{ $tareas['poblacion'] }}</td>
-          <td>{{ $tareas['codigo_postal'] }}</td>
-          <td>{{ $tareas['provincia'] }}</td>
-          <td>{{ $tareas['estado_tarea'] }}</td>
-          <td>{{ $tareas['fecha_creacion'] }}</td>
-          <td>{{ $tareas['operario_encargado'] }}</td>
-          <td>{{ $tareas['fecha_realizacion'] }}</td>
-          <td>{{ $tareas['descripcion'] }}</td>
-          <td>{{ $tareas['anotacion_inicio'] }}</td>
-          <td>{{ $tareas['anotacion_final'] }}</td>
+          <td>{{ $mostrarTareaCompleta['tarea_id'] }}</td>
+          <td>{{ $mostrarTareaCompleta['dni'] }}</td>
+          <td>{{ $mostrarTareaCompleta['nombre'] }}</td>
+          <td>{{ $mostrarTareaCompleta['apellido'] }}</td>
+          <td>{{ $mostrarTareaCompleta['telefono'] }}</td>
+          <td>{{ $mostrarTareaCompleta['correo'] }}</td>
+          <td>{{ $mostrarTareaCompleta['direccion'] }}</td>
+          <td>{{ $mostrarTareaCompleta['poblacion'] }}</td>
+          <td>{{ $mostrarTareaCompleta['codigo_postal'] }}</td>
+          <td>{{ $mostrarTareaCompleta['provincia'] }}</td>
+          <td>{{ $mostrarTareaCompleta['estado_tarea'] }}</td>
+          <td>{{ $mostrarTareaCompleta['fecha_creacion'] }}</td>
+          <td>{{ $mostrarTareaCompleta['operario_encargado'] }}</td>
+          <td>{{ $mostrarTareaCompleta['fecha_realizacion'] }}</td>
+          <td>{{ $mostrarTareaCompleta['descripcion'] }}</td>
+          <td>{{ $mostrarTareaCompleta['anotacion_inicio'] }}</td>
+          <td>{{ $mostrarTareaCompleta['anotacion_final'] }}</td>
         </tr>
-        @endforeach
     </tbody>
   </table>
 </div>

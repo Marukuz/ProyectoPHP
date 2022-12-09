@@ -2,7 +2,13 @@
 
 class Validaciones
 {
-
+    public static function validarVacio($valor){
+        if(empty($valor)){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public static function validarCodigop($codigop)
     {
         $pattern = '/^([0-9]{5})$/';
@@ -65,57 +71,57 @@ class Validaciones
             return false;
         }
     }
-    public static function filtradoCadena($error,$dni,$nombre,$apellido,$correo,$telefono,$direccion,$poblacion,$codigop,$provincia,$operario,$fecha,$descripcion,$anotacioni){
+    public static function filtradoErrores($error,$dni,$nombre,$apellido,$correo,$telefono,$direccion,$poblacion,$codigop,$provincia,$operario,$fecha,$descripcion,$anotacioni){
     
-        if(empty($dni)){
+        if(self::validarVacio($dni)){
             $error->AnotaError('dni','No has introducido un dni');
         }elseif(!self::ValidarDNI($dni)){
             $error->AnotaError('dni','Formato no valido');
         }   
-        if(empty($nombre)){
+        if(self::validarVacio($nombre)){
             $error->AnotaError('nombre','No has introducido un nombre');
         }elseif(!self::validarNombreYApellido($nombre)){
             $error->AnotaError('nombre','Formato no valido, no introduzca numeros.');
         }  
-        if(empty($apellido)){
+        if(self::validarVacio($apellido)){
             $error->AnotaError('apellido','No has introducido un apellido');
         }elseif(!self::validarNombreYApellido($apellido)){
             $error->AnotaError('apellido','Formato no valido, no introduzca numeros.');
         }  
-        if(empty($correo)){
+        if(self::validarVacio($correo)){
             $error->AnotaError('correo','No has introducido un correo');
         }elseif(!self::validarCorreo($correo)){
             $error->AnotaError('correo','Formato no valido');
         }
-        if(empty($telefono)){
+        if(self::validarVacio($telefono)){
             $error->AnotaError('telefono','No has introducido un telefono');
         }elseif(!self::validarTelefono($telefono)){
             $error->AnotaError('telefono','Formato no valido');
         }   
-        if(empty($direccion)){
+        if(self::validarVacio($direccion)){
             $error->AnotaError('direccion','No has introducido una direccion');
         }
-        if(empty($poblacion)){
+        if(self::validarVacio($poblacion)){
             $error->AnotaError('poblacion','No has introducido una poblacion');
         }
-        if(empty($codigop)){
+        if(self::validarVacio($codigop)){
             $error->AnotaError('codigop','No has introducido un codigo postal');
         }elseif(!self::validarCodigop($codigop)){
             $error->AnotaError('codigop','Formato no valido');
         }
-        if(empty($provincia)){
+        if(self::validarVacio($provincia)){
             $error->AnotaError('provincia','No has seleccionado una provincia');
         }
-        if(empty($operario)){
+        if(self::validarVacio($operario)){
             $error->AnotaError('operario','No has seleccionado un operario');
         }
-        if(empty($fecha)){
+        if(self::validarVacio($fecha)){
             $error->AnotaError('fecha','No has seleccionado una fecha');
         }
-        if(empty($descripcion)){
+        if(self::validarVacio($descripcion)){
             $error->AnotaError('descripcion','No has introducido una descripcion');
         }
-        if(empty($anotacioni)){
+        if(self::validarVacio($anotacioni)){
             $error->AnotaError('anotacioni','No has introducido una anotacion inicial');
     
         }

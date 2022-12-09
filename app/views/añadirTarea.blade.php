@@ -1,12 +1,5 @@
 @extends('plantilla')
-@section('contenido')
-    <style>
-        #formulario{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-    </style>
+@section('contenido')   
     <br>
     <h1 style="text-align: center;">Añadir tarea</h1><br>
     <div id="formulario" >
