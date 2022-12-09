@@ -69,27 +69,27 @@ class Validaciones
     
         if(empty($dni)){
             $error->AnotaError('dni','No has introducido un dni');
-        }elseif(self::ValidarDNI($dni)){
+        }elseif(!self::ValidarDNI($dni)){
             $error->AnotaError('dni','Formato no valido');
         }   
         if(empty($nombre)){
             $error->AnotaError('nombre','No has introducido un nombre');
-        }elseif(self::validarNombreYApellido($nombre)){
+        }elseif(!self::validarNombreYApellido($nombre)){
             $error->AnotaError('nombre','Formato no valido, no introduzca numeros.');
         }  
         if(empty($apellido)){
             $error->AnotaError('apellido','No has introducido un apellido');
-        }elseif(self::validarNombreYApellido($apellido)){
+        }elseif(!self::validarNombreYApellido($apellido)){
             $error->AnotaError('apellido','Formato no valido, no introduzca numeros.');
         }  
         if(empty($correo)){
             $error->AnotaError('correo','No has introducido un correo');
-        }elseif(self::validarCorreo($correo)){
+        }elseif(!self::validarCorreo($correo)){
             $error->AnotaError('correo','Formato no valido');
         }
         if(empty($telefono)){
             $error->AnotaError('telefono','No has introducido un telefono');
-        }elseif(self::validarTelefono($telefono)){
+        }elseif(!self::validarTelefono($telefono)){
             $error->AnotaError('telefono','Formato no valido');
         }   
         if(empty($direccion)){
@@ -100,7 +100,7 @@ class Validaciones
         }
         if(empty($codigop)){
             $error->AnotaError('codigop','No has introducido un codigo postal');
-        }elseif(self::validarCodigop($codigop)){
+        }elseif(!self::validarCodigop($codigop)){
             $error->AnotaError('codigop','Formato no valido');
         }
         if(empty($provincia)){

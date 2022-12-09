@@ -14,6 +14,7 @@ class Tareas{
         }
         return $tareas;
     }   
+
     public static function añadirTarea($dni,$nombre,$apellido,$correo,$telefono,$direccion,$poblacion,$codigop,$provincia,$operario,$fecha,$descripcion,$anotacioni){
         $base = Conexion::getInstance();
         $fechaactual = strval(date('Y-m-d'));
@@ -22,6 +23,7 @@ class Tareas{
         $result = $base ->base->prepare($sql);
         $result -> execute();
     }
+
     public static function mostrarTareaID($id){
         $base = Conexion::getInstance();
         $sql="SELECT * FROM tareas WHERE tarea_id='$id'";
@@ -33,6 +35,7 @@ class Tareas{
         }
         return $tareas;
     }
+    
     public static function mostrarProvincias(){
         $base = Conexion::getInstance();
         $sql="SELECT * FROM tbl_provincias";

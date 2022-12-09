@@ -38,12 +38,16 @@ function añadirTarea(){
     $provincias = Tareas::mostrarProvincias();
 
     $error=new GestorErrores('<span style="color: red;">','</span>');
+
     if($_POST){
         $error = Validaciones::filtradoCadena($error,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
         $tareas = [];
         array_push($tareas,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
         if(!$error->HayErrores()){
             Tareas::añadirTarea($_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],$_POST["provincia"],$_POST["operario"],$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
+            echo $blade -> render('añadirTarea', [
+                'error'=>$error, 'tareas'=>$tareas, 'provincias'=>$provincias
+            ]);
         }else{
             echo $blade -> render('añadirTarea', [
                 'error'=>$error, 'tareas'=>$tareas, 'provincias'=>$provincias

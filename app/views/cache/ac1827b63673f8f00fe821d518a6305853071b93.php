@@ -30,7 +30,7 @@
 <body>
 
 
-    @yield('contenido')
+    <?php echo $__env->yieldContent('contenido'); ?>
 
 
     <footer class="bg-light text-center text-white">
@@ -47,4 +47,4 @@
 
 </body>
 
-</html>
+</html><?php /**PATH C:\Users\2DAW\Desktop\ProyectoPHP_blade\app\views/plantilla.blade.php ENDPATH**/ ?>
