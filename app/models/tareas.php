@@ -35,7 +35,7 @@ class Tareas{
         }
         return $tareas;
     }
-    
+
     public static function mostrarProvincias(){
         $base = Conexion::getInstance();
         $sql="SELECT * FROM tbl_provincias";
@@ -46,5 +46,29 @@ class Tareas{
                 $provincias[] = $provincia;
            }
         return $provincias;
+    }
+    
+    public static function paginacion($numero){
+        $base = Conexion::getInstance();
+        $sql ="SELECT COUNT(*) AS tareas_totales FROM tareas";
+        $result = $base->base->prepare($sql);
+        $result->execute();
+        return ceil($result->fetch(PDO::FETCH_ASSOC)['tareas_totales']/$numero);
+    }
+
+    public static function getTareasPag($numero,$pagina){
+        $base = Conexion::getInstance();
+        
+        $limite = ($pagina - 1) * ($numero + 1);
+
+        $sql="SELECT * FROM tareas ORDER BY fecha_realizacion LIMIT $numero OFFSET $limite";
+        $result = $base->base->prepare($sql);
+        $result -> execute();
+
+        $tareas = [];
+        while($tarea = $result->fetch()){
+            $tareas[] = $tarea;
+        }
+        return $tareas;
     }
 }

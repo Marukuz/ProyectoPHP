@@ -68,6 +68,5 @@ function modificarTarea(){
     }else{
         echo $blade -> render('modificarTareaID');
     }
-    
 }
 
