@@ -3,9 +3,6 @@
 function login(){
     require('models/blade.php');
     echo $blade->render('login');
-    if($_POST){
-        echo $blade->render('listatareas');
-    }
 }
 
 function mostrarTareas(){
@@ -70,13 +67,6 @@ function modificarTarea(){
     }
     
 }
-function test(){
-    require('models/tareas.php');
-    require('models/blade.php');
-
-    echo $blade->render('opciones');
-}
-
 function añadirTarea(){
     //Incluimos modelo
     require('models/tareas.php');
