@@ -1,5 +1,4 @@
 <?php
-
 function login(){
     require('models/blade.php');
     echo $blade->render('login');

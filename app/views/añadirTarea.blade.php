@@ -58,9 +58,10 @@
             <input type="date" class="form-control" name="fecha" value="{{$tareas[10] ?? ''}}"><br>
 
             Descripcion: {!!$error->ErrorFormateado("descripcion")!!}<br>
-            <textarea class="form-control" name="descripcion" value="{{$tareas[11] ?? ''}}"></textarea>
+            <textarea class="form-control" name="descripcion" value="{{$tareas[11] ?? ''}}"></textarea><br>
+            
             Anotacion Inicial: {!!$error->ErrorFormateado("anotacioni")!!}<br>
-            <textarea class="form-control" name="anotacioni" value="{{$tareas[12] ?? ''}}"></textarea>
+            <textarea class="form-control" name="anotacioni" value="{{$tareas[12] ?? ''}}"></textarea><br>
             
             <button type="submit" class="btn btn-primary">Añadir</button>
         </form>
