@@ -59,12 +59,15 @@
             <input type="date" class="form-control" name="fecha" value="<?php echo e($tareas[10] ?? ''); ?>"><br>
 
             Descripcion: <?php echo $error->ErrorFormateado("descripcion"); ?><br>
-            <textarea class="form-control" name="descripcion" value="<?php echo e($tareas[11] ?? ''); ?>"></textarea>
+            <textarea class="form-control" name="descripcion" value="<?php echo e($tareas[11] ?? ''); ?>"></textarea><br>
+            
             Anotacion Inicial: <?php echo $error->ErrorFormateado("anotacioni"); ?><br>
-            <textarea class="form-control" name="anotacioni" value="<?php echo e($tareas[12] ?? ''); ?>"></textarea>
+            <textarea class="form-control" name="anotacioni" value="<?php echo e($tareas[12] ?? ''); ?>"></textarea><br>
             
             <button type="submit" class="btn btn-primary">Añadir</button>
         </form>
     </div>
 <?php $__env->stopSection(); ?>
+
+
 <?php echo $__env->make('plantilla', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\marcc\OneDrive\Escritorio\ProyectoPHP_blade\app\views/añadirTarea.blade.php ENDPATH**/ ?>

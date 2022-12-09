@@ -7,7 +7,7 @@ function login(){
     }
 }
 
-function mostrarTarea(){
+function mostrarTareas(){
     //Incluimos modelo
     require('models/tareas.php');
     require('models/blade.php');
@@ -17,7 +17,24 @@ function mostrarTarea(){
         'mostrarTareas'=>$mostrarTareas        
     ]);
 }
+function mostrarTareasPendientes(){
+    require('models/tareas.php');
+    require('models/blade.php');
+    $mostrarTareasPendientes = Tareas::mostrarTareasPendientes();
+    echo $blade->render('listatareaspendientes', [
+        'mostrarTareasPendientes'=>$mostrarTareasPendientes       
+    ]);
+}
 
+function mostrarTareaCompleta(){
+    require('models/tareas.php');
+    require('models/blade.php');
+    $id = $_GET['id'];
+    $mostrarTareaCompleta = Tareas::mostrarTareaCompleta($id);
+    echo $blade->render('tareacompleta', [
+        'mostrarTareaCompleta'=>$mostrarTareaCompleta       
+    ]);
+}
 
 function test(){
     require('models/tareas.php');

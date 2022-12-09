@@ -14,6 +14,30 @@ class Tareas{
         }
         return $tareas;
     }   
+    public static function mostrarTareasPendientes() {
+        //B=Esperando ser aprobada, P=Pendiente, R=Realizada, C=Cancelada
+        $base = Conexion::getInstance();
+        $sql ="SELECT tarea_id, nombre, apellido, telefono, poblacion, provincia, estado_tarea, descripcion, anotacion_inicio, fecha_realizacion FROM tareas WHERE estado_tarea='P'";
+        $result = $base->base->prepare($sql);
+        $result->execute();
+        $tareas = [];
+        while($tarea = $result->fetch()){
+            $tareas[] = $tarea;
+        }
+        return $tareas;
+    }
+
+    public static function mostrarTareaCompleta($id){
+        $base = Conexion::getInstance();
+        $sql="SELECT tarea_id, dni , nombre, apellido, telefono, correo, direccion, poblacion, codigo_postal, provincia, estado_tarea, fecha_creacion, operario_encargado, fecha_realizacion, descripcion, anotacion_inicio, anotacion_final FROM tareas WHERE tarea_id='$id'";
+        $result = $base->base->prepare($sql);
+        $result->execute();
+        $tareas = [];
+        while($tarea = $result->fetch()){
+            $tareas[] = $tarea;
+        }
+        return $tareas;
+    }
 
     public static function añadirTarea($dni,$nombre,$apellido,$correo,$telefono,$direccion,$poblacion,$codigop,$provincia,$operario,$fecha,$descripcion,$anotacioni){
         $base = Conexion::getInstance();
@@ -23,7 +47,12 @@ class Tareas{
         $result = $base ->base->prepare($sql);
         $result -> execute();
     }
-
+    public static function modificarTarea($id){
+        $base = conex();
+        $sql="UPDATE tareas SET tarea_id = '$id', dni='$dni', nombre='$nombre', apellido='$apellido', telefono='$telefono', correo='$correo', direccion='$direccion', poblacion='$poblacion', codigo_postal='$codigop', provincia='$provincia', estado_tarea='$estado', fecha_creacion='$fecha_creacion', operario_encargado='$operario', fecha_realizacion='$fecha_realizacion', anotacion_inicio='$anotacioni', anotacion_final='$anotacionf' WHERE tarea_id='$id'";
+            $result =$base->prepare($sql);
+            $result -> execute();
+    }
     public static function mostrarTareaID($id){
         $base = Conexion::getInstance();
         $sql="SELECT * FROM tareas WHERE tarea_id='$id'";

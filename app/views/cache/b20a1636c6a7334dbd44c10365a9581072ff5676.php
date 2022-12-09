@@ -14,11 +14,9 @@
           <th scope="col">Descripcion</th>
           <th scope="col">Anotacion Inicial</th>
           <th scope="col">Fecha de realizacion</th>
-          <th scope="col"></th>
-
         </tr>
       </thead>
-          <?php $__currentLoopData = $mostrarTareas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tareas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
+          <?php $__currentLoopData = $mostrarTareasPendientes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tareas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
         <tr>
           <td><?php echo e($tareas['tarea_id']); ?></td>
           <td><?php echo e($tareas['nombre']); ?></td>
@@ -30,8 +28,6 @@
           <td><?php echo e($tareas['descripcion']); ?></td>
           <td><?php echo e($tareas['anotacion_inicio']); ?></td>
           <td><?php echo e($tareas['fecha_realizacion']); ?></td>
-          <td><a href="index.php?controller=tareasController&action=mostrarTareaCompleta&id=<?php echo e($tareas['tarea_id']); ?>"><button>Ver</button></a>
-          <a href="index.php?controller=tareasController&action=mostrarTareaCompleta&id=<?php echo e($tareas['tarea_id']); ?>"><button>Modificar</button></td>
         </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
       <tbody>
@@ -40,4 +36,4 @@
     </table>
   </div>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('plantilla', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\marcc\OneDrive\Escritorio\ProyectoPHP_blade\app\views/listatareas.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('plantilla', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\marcc\OneDrive\Escritorio\ProyectoPHP_blade\app\views/listatareaspendientes.blade.php ENDPATH**/ ?>

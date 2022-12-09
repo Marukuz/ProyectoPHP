@@ -14,11 +14,9 @@
           <th scope="col">Descripcion</th>
           <th scope="col">Anotacion Inicial</th>
           <th scope="col">Fecha de realizacion</th>
-          <th scope="col"></th>
-
         </tr>
       </thead>
-          @foreach($mostrarTareas as $tareas) 
+          @foreach($mostrarTareasPendientes as $tareas) 
         <tr>
           <td>{{ $tareas['tarea_id'] }}</td>
           <td>{{ $tareas['nombre'] }}</td>
@@ -30,8 +28,6 @@
           <td>{{ $tareas['descripcion'] }}</td>
           <td>{{ $tareas['anotacion_inicio'] }}</td>
           <td>{{ $tareas['fecha_realizacion'] }}</td>
-          <td><a href="index.php?controller=tareasController&action=mostrarTareaCompleta&id={{$tareas['tarea_id']}}"><button>Ver</button></a>
-          <a href="index.php?controller=tareasController&action=mostrarTareaCompleta&id={{$tareas['tarea_id']}}"><button>Modificar</button></td>
         </tr>
         @endforeach
       <tbody>

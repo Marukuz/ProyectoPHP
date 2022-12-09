@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title></title>
 </head>
-
 <header>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Inicio</a>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="index.php?controller=tareasController&action=mostrarTarea">Ver lista</a>
+                    <a class="nav-link" href="index.php?controller=tareasController&action=mostrarTareas">Ver Tareas</a>
+                    <a class="nav-link" href="index.php?controller=tareasController&action=mostrarTareasPendientes">Ver Tareas Pendientes</a>
                     <a class="nav-link" href="index.php?controller=tareasController&action=añadirTarea">Añadir tarea</a>
                     <a class="nav-link" href="#">Modificar tarea</a>
                     <a class="nav-link" href="#">Eliminar tarea</a>
