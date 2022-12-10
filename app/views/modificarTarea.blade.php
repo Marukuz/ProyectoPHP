@@ -32,7 +32,7 @@
 
             Provincia: <br>
             <select class="form-select" name="provincia">
-                <option selected disabled>{{$tarea['provincia']}}</option>
+                <option selected>{{$tarea['provincia']}}</option>
                 @foreach ($provincias as $provincia)
                 <option>{{$provincia['nombre']}}</option>
                 @endforeach
@@ -40,7 +40,7 @@
 
             Estado Tarea: <br>
             <select class="form-select" name="estado">
-            <option selected disabled>{{$tarea['estado_tarea']}}</option>
+                <option selected>{{$tarea['estado_tarea']}}</option>
                 <option>B</option>
                 <option>P</option>
                 <option>R</option>
@@ -52,7 +52,7 @@
 
             Operario encargado: <br>
             <select class="form-select" name="operario">
-                <option selected>{{$tarea['operario_encargado']}}</option>
+                <option selected disabled>{{$tarea['operario_encargado']}}</option>
                 <option>Marc</option>
                 <option>Kike</option>
                 <option>Lara</option>
