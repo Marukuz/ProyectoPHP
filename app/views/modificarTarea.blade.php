@@ -31,8 +31,8 @@
             <input type="text" class="form-control" name="codigop" value="{{$tarea['codigo_postal'] ?? ''}}"><br>
 
             Provincia: <br>
-            <select class="form-select" name="provincia" >
-                <option selected>{{$tarea['provincia']}}</option>
+            <select class="form-select" name="provincia">
+                <option selected disabled>{{$tarea['provincia']}}</option>
                 @foreach ($provincias as $provincia)
                 <option>{{$provincia['nombre']}}</option>
                 @endforeach

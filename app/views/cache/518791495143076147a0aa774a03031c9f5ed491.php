@@ -31,8 +31,8 @@
             <input type="text" class="form-control" name="codigop" value="<?php echo e($tarea['codigo_postal'] ?? ''); ?>"><br>
 
             Provincia: <br>
-            <select class="form-select" name="provincia" >
-                <option selected><?php echo e($tarea['provincia']); ?></option>
+            <select class="form-select" name="provincia">
+                <option selected disabled><?php echo e($tarea['provincia']); ?></option>
                 <?php $__currentLoopData = $provincias; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $provincia): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <option><?php echo e($provincia['nombre']); ?></option>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
