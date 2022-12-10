@@ -32,7 +32,7 @@
 
             Provincia: <br>
             <select class="form-select" name="provincia" >
-                <option selected disabled>{{$tarea['provincia']}}</option>
+                <option selected>{{$tarea['provincia']}}</option>
                 @foreach ($provincias as $provincia)
                 <option>{{$provincia['nombre']}}</option>
                 @endforeach

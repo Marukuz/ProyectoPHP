@@ -33,6 +33,7 @@ function mostrarTareaCompleta(){
         'mostrarTareaCompleta'=>$mostrarTareaCompleta       
     ]);
 }
+
 function modificarTarea(){
     require('models/Consultas.php');
     require('models/blade.php');

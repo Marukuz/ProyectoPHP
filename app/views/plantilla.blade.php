@@ -18,7 +18,6 @@
                     <a class="nav-link" href="index.php?controller=tareasController&action=mostrarTareas">Ver Tareas</a>
                     <a class="nav-link" href="index.php?controller=tareasController&action=mostrarTareasPendientes">Ver Tareas Pendientes</a>
                     <a class="nav-link" href="index.php?controller=tareasController&action=añadirTarea">Añadir tarea</a>
-                    <a class="nav-link" href="#">Eliminar tarea</a>
                     <a class="nav-link" href="#">Cambiar estado</a>
                     <a class="nav-link" href="#">Buscar tarea</a>
                 </div>

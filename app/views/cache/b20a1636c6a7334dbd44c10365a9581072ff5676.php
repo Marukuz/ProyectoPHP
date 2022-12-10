@@ -16,6 +16,7 @@
           <th scope="col">Fecha de realizacion</th>
         </tr>
       </thead>
+      <tbody>
           <?php $__currentLoopData = $mostrarTareasPendientes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tareas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
         <tr>
           <td><?php echo e($tareas['tarea_id']); ?></td>
@@ -30,8 +31,6 @@
           <td><?php echo e($tareas['fecha_realizacion']); ?></td>
         </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-      <tbody>
-      <tr>
       </tbody>
     </table>
   </div>
