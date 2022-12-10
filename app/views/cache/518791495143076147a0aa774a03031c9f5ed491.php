@@ -39,8 +39,13 @@
             </select><br>
 
             Estado Tarea: <br>
-            <input type="text" class="form-control" name="estado" value="<?php echo e($tarea['estado_tarea'] ?? ''); ?>"><br>
-
+            <select class="form-select" name="estado">
+            <option selected><?php echo e($tarea['estado_tarea']); ?></option>
+                <option>B</option>
+                <option>P</option>
+                <option>R</option>
+                <option>C</option>
+            </select>
             Fecha creacion: <br>
             <input type="date" class="form-control" name="fechac" value="<?php echo e($tarea['fecha_creacion'] ?? ''); ?>" readonly><br>
 
