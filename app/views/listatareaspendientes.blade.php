@@ -16,6 +16,7 @@
           <th scope="col">Fecha de realizacion</th>
         </tr>
       </thead>
+      <tbody>
           @foreach($mostrarTareasPendientes as $tareas) 
         <tr>
           <td>{{ $tareas['tarea_id'] }}</td>
@@ -30,8 +31,6 @@
           <td>{{ $tareas['fecha_realizacion'] }}</td>
         </tr>
         @endforeach
-      <tbody>
-      <tr>
       </tbody>
     </table>
   </div>

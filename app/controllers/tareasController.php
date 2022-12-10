@@ -7,51 +7,51 @@ function login(){
 
 function mostrarTareas(){
     //Incluimos modelo
-    require('models/tareas.php');
+    require('models/Consultas.php');
     require('models/blade.php');
-    $mostrarTareas = Tareas::mostrarTareas();
+    $mostrarTareas = Consultas::mostrarTareas();
     //Incluimos vista
     echo $blade->render('listatareas', [
         'mostrarTareas'=>$mostrarTareas        
     ]);
 }
 function mostrarTareasPendientes(){
-    require('models/tareas.php');
+    require('models/Consultas.php');
     require('models/blade.php');
-    $mostrarTareasPendientes = Tareas::mostrarTareasPendientes();
+    $mostrarTareasPendientes = Consultas::mostrarTareasPendientes();
     echo $blade->render('listatareaspendientes', [
         'mostrarTareasPendientes'=>$mostrarTareasPendientes       
     ]);
 }
 
 function mostrarTareaCompleta(){
-    require('models/tareas.php');
+    require('models/Consultas.php');
     require('models/blade.php');
     $id = $_GET['id'];
-    $mostrarTareaCompleta = Tareas::mostrarTareaCompleta($id);
+    $mostrarTareaCompleta = Consultas::mostrarTareaCompleta($id);
     echo $blade->render('tareacompleta', [
         'mostrarTareaCompleta'=>$mostrarTareaCompleta       
     ]);
 }
 function modificarTarea(){
-    require('models/tareas.php');
+    require('models/Consultas.php');
     require('models/blade.php');
     require('models/gestorerrores.php');
     require('validaciones.php');
 
     $id = $_GET['id'];
-    $tarea = Tareas::mostrarTareaCompleta($id);
+    $tarea = Consultas::mostrarTareaCompleta($id);
 
     $error=new GestorErrores('<span style="color: red;">','</span>');
 
-    $provincias = Tareas::mostrarProvincias();
+    $provincias = Consultas::mostrarProvincias();
 
     if($_POST){
         $error = Validaciones::filtradoTareas($error,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
         $tareas = [];
         array_push($tareas,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"],$_POST["anotacionf"]);
         if(!$error->HayErrores() == 0){
-            Tareas::modificarTarea($_POST["id"],$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["telefono"],$_POST["correo"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),$_POST["estado"],filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"],$_POST["anotacionf"]);
+            Consultas::modificarTarea($_POST["id"],$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["telefono"],$_POST["correo"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),$_POST["estado"],filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"],$_POST["anotacionf"]);
             echo $blade -> render('modificarTarea', [
                 'error'=>$error, 'tareas'=>$tareas, 'provincias'=>$provincias,'tarea'=>$tarea
             ]);
@@ -67,15 +67,16 @@ function modificarTarea(){
     }
     
 }
+
 function añadirTarea(){
     //Incluimos modelo
-    require('models/tareas.php');
+    require('models/Consultas.php');
     require('models/blade.php');
     require('models/gestorerrores.php');
     require('validaciones.php');
     //FILTRADO 
 
-    $provincias = Tareas::mostrarProvincias();
+    $provincias = Consultas::mostrarProvincias();
 
     $error=new GestorErrores('<span style="color: red;">','</span>');
 
@@ -84,7 +85,7 @@ function añadirTarea(){
         $tareas = [];
         array_push($tareas,$_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
         if(!$error->HayErrores()){
-            Tareas::añadirTarea($_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
+            Consultas::añadirTarea($_POST["dni"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["telefono"],$_POST["direccion"],$_POST["poblacion"],$_POST["codigop"],filter_input(INPUT_POST,'provincia'),filter_input(INPUT_POST,'operario'),$_POST["fecha"],$_POST["descripcion"],$_POST["anotacioni"]);
             echo $blade -> render('añadirTarea', [
                 'error'=>$error, 'tareas'=>$tareas, 'provincias'=>$provincias
             ]);
@@ -98,5 +99,30 @@ function añadirTarea(){
             'error'=>$error,'provincias'=>$provincias
         ]);
     }
+}
+function eliminarTareaVista(){
+    require('models/Consultas.php');
+    require('models/blade.php');
+    
+    $id = $_GET['id'];
+
+    $tarea = Consultas::mostrarTareaID($id);
+    echo $blade->render('eliminarTarea', [
+        'tarea'=>$tarea        
+    ]);
+}
+
+function eliminarTarea(){
+    require('models/Consultas.php');
+    require('models/blade.php');
+
+    $id = $_GET['id'];
+
+    Consultas::eliminarTarea($id);
+    $mostrarTareas = Consultas::mostrarTareas();
+
+    echo $blade->render('listatareas',[
+        'mostrarTareas'=>$mostrarTareas
+    ]);
 }
 

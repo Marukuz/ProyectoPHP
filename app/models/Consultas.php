@@ -1,7 +1,7 @@
 <?php
 require_once 'conexionPDO.php';
 
-class Tareas{
+class Consultas{
 
     public static function mostrarTareas() {
         $base = Conexion::getInstance();
@@ -56,13 +56,14 @@ class Tareas{
         $sql="SELECT * FROM tareas WHERE tarea_id='$id'";
         $result = $base->base->prepare($sql);
         $result -> execute();
-        $tareas = [];
-        while($tarea = $result->fetch()){
-            $tareas[] = $tarea;
-        }
-        return $tareas;
+        return $result->fetch(PDO::FETCH_ASSOC);
     }
-
+    public static function eliminarTarea($id){
+        $base = Conexion::getInstance();
+        $sql="DELETE FROM tareas WHERE tarea_id='$id'";
+        $result =$base->base->prepare($sql);
+        $result -> execute(); 
+    }
     public static function mostrarProvincias(){
         $base = Conexion::getInstance();
         $sql="SELECT * FROM tbl_provincias";
