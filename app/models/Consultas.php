@@ -15,7 +15,6 @@ class Consultas{
         return $tareas;
     }   
     public static function mostrarTareasPendientes() {
-        //B=Esperando ser aprobada, P=Pendiente, R=Realizada, C=Cancelada
         $base = Conexion::getInstance();
         $sql ="SELECT tarea_id, nombre, apellido, telefono, poblacion, provincia, estado_tarea, descripcion, anotacion_inicio, fecha_realizacion FROM tareas WHERE estado_tarea='P'";
         $result = $base->base->prepare($sql);
@@ -26,7 +25,6 @@ class Consultas{
         }
         return $tareas;
     }
-
     public static function mostrarTareaCompleta($id){
         $base = Conexion::getInstance();
         $sql="SELECT tarea_id, dni , nombre, apellido, telefono, correo, direccion, poblacion, codigo_postal, provincia, estado_tarea, fecha_creacion, operario_encargado, fecha_realizacion, descripcion, anotacion_inicio, anotacion_final FROM tareas WHERE tarea_id='$id'";

@@ -9,7 +9,7 @@
             DNI: {!!$error->ErrorFormateado("dni")!!} <br>
             <input type="text" class="form-control" name="dni" value="{{$tarea['dni'] ?? ''}}"><br>
 
-            Nombre: <br>
+            Nombre:  <br>
             <input type="text" class="form-control" name="nombre" value="{{$tarea['nombre'] ?? ''}}"><br>
 
             Apellido: <br>
@@ -40,12 +40,13 @@
 
             Estado Tarea: <br>
             <select class="form-select" name="estado">
-            <option selected>{{$tarea['estado_tarea']}}</option>
+            <option selected disabled>{{$tarea['estado_tarea']}}</option>
                 <option>B</option>
                 <option>P</option>
                 <option>R</option>
                 <option>C</option>
-            </select>
+            </select><br>
+
             Fecha creacion: <br>
             <input type="date" class="form-control" name="fechac" value="{{$tarea['fecha_creacion'] ?? ''}}" readonly><br>
 
@@ -63,15 +64,15 @@
             <input type="date" class="form-control" name="fecha"  value="{{$tarea['fecha_realizacion'] ?? ''}}"><br>
 
             Descripcion: <br>
-            <textarea class="form-control" name="descripcion">{{$tarea['descripcion']}}</textarea>
+            <textarea class="form-control" name="descripcion">{{$tarea['descripcion']}}</textarea><br>
 
             Anotacion inicial: <br>
-            <textarea class="form-control" name="anotacioni" >{{$tarea['anotacion_inicio'] }}</textarea>
+            <textarea class="form-control" name="anotacioni" >{{$tarea['anotacion_inicio'] }}</textarea><br>
 
             Anotacion final: <br>
             <textarea class="form-control" name="anotacionf" >{{$tarea['anotacion_final']}}</textarea>
 
-            <button type="submit" class="btn btn-primary">Modificar</button>
+            <input type="submit" class="btn btn-primary" value="Modificar">
         </form>
     </div>
 </body>
