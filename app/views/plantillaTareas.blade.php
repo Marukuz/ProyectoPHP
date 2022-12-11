@@ -10,14 +10,14 @@
     <title></title>
 </head>
 <header>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-secondary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Inicio</a>
+            <a class="navbar-brand text-light" href="#">Inicio</a>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::mostrarTareas">Ver Tareas</a>
-                    <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::mostrarTareasPendientes">Ver Tareas Pendientes</a>
-                    <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::añadirTarea">Añadir tarea</a>
+                    <a class="nav-link text-light" href="index.php?controller=tareasController&action=Tareas::mostrarTareas">Ver Tareas</a>
+                    <a class="nav-link text-light" href="index.php?controller=tareasController&action=Tareas::mostrarTareasPendientes">Ver Tareas Pendientes</a>
+                    <a class="nav-link text-light" href="index.php?controller=tareasController&action=Tareas::añadirTarea">Añadir tarea</a>
                 </div>
             </div>
             <a class="nav-link" href="index.php?controller=usuariosController&action=Usuarios::verUsuarios"><button class="btn btn-primary">Usuarios</button></a>&nbsp&nbsp
@@ -31,7 +31,7 @@
     @yield('contenido')
 
 
-    <footer class="bg-light text-center text-white">
+    <footer class="bg-secondary text-center text-white">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2022 Copyright:

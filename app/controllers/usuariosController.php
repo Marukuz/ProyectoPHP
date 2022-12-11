@@ -20,19 +20,23 @@ class Usuarios{
         require('models/ConsultasTareas.php');
         require('tareasController.php');
         require('models/blade.php');
+        $error = '<span style="color: red;">Error, usuario o contraseña incorrectos.</span>';
         if($_POST){
             if(ConsultasUsuarios::getUsuario($_POST['usuario'],$_POST['password'])){
-                
                 $mostrarTareas = ConsultasTareas::mostrarTareas();
                 echo $blade->render('listatareas', [
-                'mostrarTareas'=>$mostrarTareas        
+                'mostrarTareas'=>$mostrarTareas      
                 ]);
             }else{
-                echo $blade->render('login');
+                echo $blade->render('login',[
+                    'error'=>$error
+                ]);
 
             }
         }else{
-            echo $blade->render('login');
+            echo $blade->render('login',[
+                'error'=>''
+            ]);
         }     
     }
     

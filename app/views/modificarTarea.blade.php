@@ -76,7 +76,7 @@
             <br>
             <div style="text-align: center;">
                 <input type="submit" class="btn btn-primary" value="Modificar">
-            </div>
+            </div><br><br>
         </form>
     </div>
 </body>

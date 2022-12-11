@@ -4,7 +4,6 @@
     <h1 style="text-align: center;">Añadir tarea</h1><br>
     <div id="formulario" >
         <form method="post">
-            
             <!-- Filtrado de errores -->    
             DNI: {!!$error->ErrorFormateado("dni")!!} <br> 
             <input type="text" class="form-control" name="dni" value="{{$tareas[0] ?? ''}}"><br>
@@ -71,7 +70,7 @@
             
             <div style="text-align: center;">
                 <button type="submit" class="btn btn-primary">Añadir</button>
-            </div>
+            </div><br><br>
         </form>
     </div>
 @endsection

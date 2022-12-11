@@ -2,7 +2,7 @@
 @section('contenido')
   <div> 
     <table class="table">
-      <thead>
+      <thead class="table-dark">
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Nombre</th>

@@ -22,7 +22,7 @@
 
             <div style="text-align: center;">
                 <button type="submit" class="btn btn-primary">Añadir</button>
-            </div>
+            </div><br><br>
         </form>
     </div>
 @endsection

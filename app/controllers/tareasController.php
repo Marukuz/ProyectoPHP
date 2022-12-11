@@ -13,11 +13,9 @@ class Tareas{
      * @return void
      */
     public static function mostrarTareas(){
-        //Incluimos modelo
         require('models/ConsultasTareas.php');
         require('models/blade.php');
         $mostrarTareas = ConsultasTareas::mostrarTareas();
-        //Incluimos vista
         echo $blade->render('listaTareas', [
             'mostrarTareas'=>$mostrarTareas        
         ]);
@@ -27,7 +25,7 @@ class Tareas{
      * mostrarTareasPendientes
      * Aqui renderizamos la vista y pasamos por parametro las tareas que estan pendientes.
      * @return void
-     */
+     */    
     public static function mostrarTareasPendientes(){
         require('models/ConsultasTareas.php');
         require('models/blade.php');
@@ -97,15 +95,12 @@ class Tareas{
      * @return void
      */
     public static function añadirTarea(){
-        //Incluimos modelo
         require('models/ConsultasTareas.php');
         require('models/blade.php');
         require('models/gestorerrores.php');
         require('validaciones.php');
-        //FILTRADO 
-    
+
         $provincias = ConsultasTareas::mostrarProvincias();
-    
         $error=new GestorErrores('<span style="color: red;">','</span>');
     
         if($_POST){
@@ -181,6 +176,10 @@ class Tareas{
         $tarea = ConsultasTareas::mostrarTareaCompleta($id);
         if($_POST){
             ConsultasTareas::completarTarea($id,$_POST["estado"],$_POST["anotacioni"],$_POST["anotacionf"]);
+            $mostrarTareas = ConsultasTareas::mostrarTareas();
+            echo $blade->render('listaTareas', [
+                'mostrarTareas'=>$mostrarTareas        
+            ]);
         }else{
             echo $blade->render('completarTarea',[
                 'tarea'=>$tarea

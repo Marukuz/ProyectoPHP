@@ -2,7 +2,7 @@
 @section('contenido')
   <div> 
     <table class="table">
-      <thead>
+      <thead class="table-dark">
       <h1 style="text-align: center;">Quiere eliminar al siguiente Usuario?</h1>
       <br>
         <tr>

@@ -18,7 +18,8 @@
                         <div class="card shadow-2-strong" style="border-radius: 1rem;">
                             <div class="card-body p-5 text-center">
                                 <h3 class="mb-5">Login</h3>
-                                {!! $error ?? ''!!}
+                                <?php echo $error ?? ''; ?>
+
                                 <div class="form-outline mb-4">
                                     <label class="form-label">Usuario</label>
                                     <input type="text" name="usuario" class="form-control form-control-lg" />
@@ -37,4 +38,4 @@
     </form>
 </body>
 
-</html>
+</html><?php /**PATH C:\Users\marcc\OneDrive\Escritorio\ProyectoPHP\app\views/login.blade.php ENDPATH**/ ?>

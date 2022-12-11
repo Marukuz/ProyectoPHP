@@ -2,7 +2,7 @@
 @section('contenido')
   <div> 
     <table class="table">
-      <thead>
+      <thead class="table-dark">
       <h1 style="text-align: center;">Quiere eliminar la siguiente tarea?</h1>
       <br>
         <tr>
