@@ -1,0 +1,100 @@
+\hypertarget{class_usuarios}{}\doxysection{Referencia de la Clase Usuarios}
+\label{class_usuarios}\index{Usuarios@{Usuarios}}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_usuarios_a76f3efe9cf4bb6ec9998702c7fd86cd6}{loguearse}} ()
+\item 
+static \mbox{\hyperlink{class_usuarios_a8ef7142cf3bd3dd9ff31db85e3dbe735}{ver\+Usuarios}} ()
+\item 
+static \mbox{\hyperlink{class_usuarios_afea9314e5d89179e3ec026b15e6c2ac9}{añadir\+Usuario}} ()
+\item 
+static \mbox{\hyperlink{class_usuarios_ad6e9b5043d70beb16cb4eed5d3d241b9}{eliminar\+Usuario\+Vista}} ()
+\item 
+static \mbox{\hyperlink{class_usuarios_a88c5fc8abb56b4759e6792fe302f867e}{eliminar\+Usuario}} ()
+\item 
+static \mbox{\hyperlink{class_usuarios_a807456a7fd02e784fd96ff2eeac029a5}{modificar\+Usuario}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\mbox{\hyperlink{class_usuarios}{Usuarios}}
+
+Clase donde almacenamos todo lo referente a las vistas de usuario. 
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_usuarios_afea9314e5d89179e3ec026b15e6c2ac9}\label{class_usuarios_afea9314e5d89179e3ec026b15e6c2ac9}} 
+\index{Usuarios@{Usuarios}!añadirUsuario@{añadirUsuario}}
+\index{añadirUsuario@{añadirUsuario}!Usuarios@{Usuarios}}
+\doxysubsubsection{\texorpdfstring{añadirUsuario()}{añadirUsuario()}}
+{\footnotesize\ttfamily static añadir\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+añadir\+Usuario
+
+Funcion para añadir un usuario enviado desde el formulario y seguidamente si pasa el filtrado añadirlo a la BBDD \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_usuarios_a88c5fc8abb56b4759e6792fe302f867e}\label{class_usuarios_a88c5fc8abb56b4759e6792fe302f867e}} 
+\index{Usuarios@{Usuarios}!eliminarUsuario@{eliminarUsuario}}
+\index{eliminarUsuario@{eliminarUsuario}!Usuarios@{Usuarios}}
+\doxysubsubsection{\texorpdfstring{eliminarUsuario()}{eliminarUsuario()}}
+{\footnotesize\ttfamily static eliminar\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+eliminar\+Usuario
+
+Funcion que elimina el usuario que le pasamos por \$id \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_usuarios_ad6e9b5043d70beb16cb4eed5d3d241b9}\label{class_usuarios_ad6e9b5043d70beb16cb4eed5d3d241b9}} 
+\index{Usuarios@{Usuarios}!eliminarUsuarioVista@{eliminarUsuarioVista}}
+\index{eliminarUsuarioVista@{eliminarUsuarioVista}!Usuarios@{Usuarios}}
+\doxysubsubsection{\texorpdfstring{eliminarUsuarioVista()}{eliminarUsuarioVista()}}
+{\footnotesize\ttfamily static eliminar\+Usuario\+Vista (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+eliminar\+Usuario\+Vista
+
+Funcion para renderizar la tarea que queremos eliminar y elegir si queremos eliminarla o no.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_usuarios_a76f3efe9cf4bb6ec9998702c7fd86cd6}\label{class_usuarios_a76f3efe9cf4bb6ec9998702c7fd86cd6}} 
+\index{Usuarios@{Usuarios}!loguearse@{loguearse}}
+\index{loguearse@{loguearse}!Usuarios@{Usuarios}}
+\doxysubsubsection{\texorpdfstring{loguearse()}{loguearse()}}
+{\footnotesize\ttfamily static loguearse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+loguearse
+
+Funcion para la vista login que identifica si el usuario y contraseña introducido es valido y renderiza la vista correspondiente \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_usuarios_a807456a7fd02e784fd96ff2eeac029a5}\label{class_usuarios_a807456a7fd02e784fd96ff2eeac029a5}} 
+\index{Usuarios@{Usuarios}!modificarUsuario@{modificarUsuario}}
+\index{modificarUsuario@{modificarUsuario}!Usuarios@{Usuarios}}
+\doxysubsubsection{\texorpdfstring{modificarUsuario()}{modificarUsuario()}}
+{\footnotesize\ttfamily static modificar\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+modificar\+Usuario
+
+Funcion que nos permite modificar un usuario si pasa el filtrado de errores. \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_usuarios_a8ef7142cf3bd3dd9ff31db85e3dbe735}\label{class_usuarios_a8ef7142cf3bd3dd9ff31db85e3dbe735}} 
+\index{Usuarios@{Usuarios}!verUsuarios@{verUsuarios}}
+\index{verUsuarios@{verUsuarios}!Usuarios@{Usuarios}}
+\doxysubsubsection{\texorpdfstring{verUsuarios()}{verUsuarios()}}
+{\footnotesize\ttfamily static ver\+Usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+ver\+Usuarios
+
+Funcion para almacenar todos los usuarios existentes en la BBDD en una variable y renderizarlo.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/marcc/\+One\+Drive/\+Escritorio/\+Proyecto\+PHP/app/controllers/\mbox{\hyperlink{usuarios_controller_8php}{usuarios\+Controller.\+php}}\end{DoxyCompactItemize}

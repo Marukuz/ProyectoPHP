@@ -1,0 +1,231 @@
+\hypertarget{class_consultas_tareas}{}\doxysection{Referencia de la Clase Consultas\+Tareas}
+\label{class_consultas_tareas}\index{ConsultasTareas@{ConsultasTareas}}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_consultas_tareas_a938d4ac666f17bb7637eef6d5c783ffa}{mostrar\+Tareas}} ()
+\item 
+static \mbox{\hyperlink{class_consultas_tareas_a9541c11903231ee5434d0f31be58ca40}{mostrar\+Tareas\+Pendientes}} ()
+\item 
+static \mbox{\hyperlink{class_consultas_tareas_ad1d9a7250b167d4591bece87c980d2d4}{mostrar\+Tarea\+Completa}} (\$id)
+\item 
+static \mbox{\hyperlink{class_consultas_tareas_a18314b6da04ab18b9d37c7db9d1844fc}{añadir\+Tarea}} (\$dni, \$nombre, \$apellido, \$correo, \$telefono, \$direccion, \$poblacion, \$codigop, \$provincia, \$operario, \$fecha, \$descripcion, \$anotacioni)
+\item 
+static \mbox{\hyperlink{class_consultas_tareas_a6cdd708a56b47ac7d4a6839dbda4726f}{modificar\+Tarea}} (\$id, \$dni, \$nombre, \$apellido, \$telefono, \$correo, \$direccion, \$poblacion, \$codigop, \$provincia, \$estado, \$operario, \$fecha\+\_\+realizacion, \$descripcion, \$anotacioni, \$anotacionf)
+\item 
+static \mbox{\hyperlink{class_consultas_tareas_a8ee05ea4f1cd8cbd6764e20765df81af}{mostrar\+Tarea\+ID}} (\$id)
+\item 
+static \mbox{\hyperlink{class_consultas_tareas_a8fbced3ade5cbb50ed6344bf4e04263d}{eliminar\+Tarea}} (\$id)
+\item 
+static \mbox{\hyperlink{class_consultas_tareas_a2d02a35ed81804868ff262b4508aa27e}{mostrar\+Provincias}} ()
+\item 
+static \mbox{\hyperlink{class_consultas_tareas_a0c32607653206e3c7e7aa0fb9e16dc47}{completar\+Tarea}} (\$id, \$estado, \$anotacioni, \$anotacionf)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\mbox{\hyperlink{class_consultas_tareas}{Consultas\+Tareas}}
+
+Clase donde hacemos todas las consultas a la base de datos relacionadas con las \mbox{\hyperlink{class_tareas}{Tareas}}. 
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_consultas_tareas_a18314b6da04ab18b9d37c7db9d1844fc}\label{class_consultas_tareas_a18314b6da04ab18b9d37c7db9d1844fc}} 
+\index{ConsultasTareas@{ConsultasTareas}!añadirTarea@{añadirTarea}}
+\index{añadirTarea@{añadirTarea}!ConsultasTareas@{ConsultasTareas}}
+\doxysubsubsection{\texorpdfstring{añadirTarea()}{añadirTarea()}}
+{\footnotesize\ttfamily static añadir\+Tarea (\begin{DoxyParamCaption}\item[{}]{\$dni,  }\item[{}]{\$nombre,  }\item[{}]{\$apellido,  }\item[{}]{\$correo,  }\item[{}]{\$telefono,  }\item[{}]{\$direccion,  }\item[{}]{\$poblacion,  }\item[{}]{\$codigop,  }\item[{}]{\$provincia,  }\item[{}]{\$operario,  }\item[{}]{\$fecha,  }\item[{}]{\$descripcion,  }\item[{}]{\$anotacioni }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+añadir\+Tarea
+
+En esta funcion insertamos todos los datos recibidos por parametro en la base de datos para crear una nueva tarea.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+mixed & {\em \$dni} & \\
+\hline
+mixed & {\em \$nombre} & \\
+\hline
+mixed & {\em \$apellido} & \\
+\hline
+mixed & {\em \$correo} & \\
+\hline
+mixed & {\em \$telefono} & \\
+\hline
+mixed & {\em \$direccion} & \\
+\hline
+mixed & {\em \$poblacion} & \\
+\hline
+mixed & {\em \$codigop} & \\
+\hline
+mixed & {\em \$provincia} & \\
+\hline
+mixed & {\em \$operario} & \\
+\hline
+mixed & {\em \$fecha} & \\
+\hline
+mixed & {\em \$descripcion} & \\
+\hline
+mixed & {\em \$anotacioni} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_consultas_tareas_a0c32607653206e3c7e7aa0fb9e16dc47}\label{class_consultas_tareas_a0c32607653206e3c7e7aa0fb9e16dc47}} 
+\index{ConsultasTareas@{ConsultasTareas}!completarTarea@{completarTarea}}
+\index{completarTarea@{completarTarea}!ConsultasTareas@{ConsultasTareas}}
+\doxysubsubsection{\texorpdfstring{completarTarea()}{completarTarea()}}
+{\footnotesize\ttfamily static completar\+Tarea (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$estado,  }\item[{}]{\$anotacioni,  }\item[{}]{\$anotacionf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+completar\+Tarea
+
+Funcion que modifica una tarea con los datos que pasamos por parametro.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+mixed & {\em \$id} & \\
+\hline
+mixed & {\em \$estado} & \\
+\hline
+mixed & {\em \$anotacioni} & \\
+\hline
+mixed & {\em \$anotacionf} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_consultas_tareas_a8fbced3ade5cbb50ed6344bf4e04263d}\label{class_consultas_tareas_a8fbced3ade5cbb50ed6344bf4e04263d}} 
+\index{ConsultasTareas@{ConsultasTareas}!eliminarTarea@{eliminarTarea}}
+\index{eliminarTarea@{eliminarTarea}!ConsultasTareas@{ConsultasTareas}}
+\doxysubsubsection{\texorpdfstring{eliminarTarea()}{eliminarTarea()}}
+{\footnotesize\ttfamily static eliminar\+Tarea (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+eliminar\+Tarea
+
+Funcion para eliminar una tarea de la BBDD que coincida con el id que pasamos por parametro. 
+\begin{DoxyParams}[1]{Parámetros}
+mixed & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_consultas_tareas_a6cdd708a56b47ac7d4a6839dbda4726f}\label{class_consultas_tareas_a6cdd708a56b47ac7d4a6839dbda4726f}} 
+\index{ConsultasTareas@{ConsultasTareas}!modificarTarea@{modificarTarea}}
+\index{modificarTarea@{modificarTarea}!ConsultasTareas@{ConsultasTareas}}
+\doxysubsubsection{\texorpdfstring{modificarTarea()}{modificarTarea()}}
+{\footnotesize\ttfamily static modificar\+Tarea (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$dni,  }\item[{}]{\$nombre,  }\item[{}]{\$apellido,  }\item[{}]{\$telefono,  }\item[{}]{\$correo,  }\item[{}]{\$direccion,  }\item[{}]{\$poblacion,  }\item[{}]{\$codigop,  }\item[{}]{\$provincia,  }\item[{}]{\$estado,  }\item[{}]{\$operario,  }\item[{}]{\$fecha\+\_\+realizacion,  }\item[{}]{\$descripcion,  }\item[{}]{\$anotacioni,  }\item[{}]{\$anotacionf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+modificar\+Tarea
+
+En esta funcion modificamos una tarea especifica con los parametros que nos llegan.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+mixed & {\em \$id} & \\
+\hline
+mixed & {\em \$dni} & \\
+\hline
+mixed & {\em \$nombre} & \\
+\hline
+mixed & {\em \$apellido} & \\
+\hline
+mixed & {\em \$telefono} & \\
+\hline
+mixed & {\em \$correo} & \\
+\hline
+mixed & {\em \$direccion} & \\
+\hline
+mixed & {\em \$poblacion} & \\
+\hline
+mixed & {\em \$codigop} & \\
+\hline
+mixed & {\em \$provincia} & \\
+\hline
+mixed & {\em \$estado} & \\
+\hline
+mixed & {\em \$operario} & \\
+\hline
+mixed & {\em \$fecha\+\_\+realizacion} & \\
+\hline
+mixed & {\em \$descripcion} & \\
+\hline
+mixed & {\em \$anotacioni} & \\
+\hline
+mixed & {\em \$anotacionf} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_consultas_tareas_a2d02a35ed81804868ff262b4508aa27e}\label{class_consultas_tareas_a2d02a35ed81804868ff262b4508aa27e}} 
+\index{ConsultasTareas@{ConsultasTareas}!mostrarProvincias@{mostrarProvincias}}
+\index{mostrarProvincias@{mostrarProvincias}!ConsultasTareas@{ConsultasTareas}}
+\doxysubsubsection{\texorpdfstring{mostrarProvincias()}{mostrarProvincias()}}
+{\footnotesize\ttfamily static mostrar\+Provincias (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+mostrar\+Provincias
+
+Funcion donde cojemos todas las provincias que estan almacenadas en la BBDD para finalmente devolverlas en forma de array. \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_consultas_tareas_ad1d9a7250b167d4591bece87c980d2d4}\label{class_consultas_tareas_ad1d9a7250b167d4591bece87c980d2d4}} 
+\index{ConsultasTareas@{ConsultasTareas}!mostrarTareaCompleta@{mostrarTareaCompleta}}
+\index{mostrarTareaCompleta@{mostrarTareaCompleta}!ConsultasTareas@{ConsultasTareas}}
+\doxysubsubsection{\texorpdfstring{mostrarTareaCompleta()}{mostrarTareaCompleta()}}
+{\footnotesize\ttfamily static mostrar\+Tarea\+Completa (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+mostrar\+Tarea\+Completa
+
+Funcion donde sacamos la tarea la cual coincide con el id que pasamos por parametro y la devolvemos 
+\begin{DoxyParams}[1]{Parámetros}
+mixed & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_consultas_tareas_a8ee05ea4f1cd8cbd6764e20765df81af}\label{class_consultas_tareas_a8ee05ea4f1cd8cbd6764e20765df81af}} 
+\index{ConsultasTareas@{ConsultasTareas}!mostrarTareaID@{mostrarTareaID}}
+\index{mostrarTareaID@{mostrarTareaID}!ConsultasTareas@{ConsultasTareas}}
+\doxysubsubsection{\texorpdfstring{mostrarTareaID()}{mostrarTareaID()}}
+{\footnotesize\ttfamily static mostrar\+Tarea\+ID (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+mostrar\+Tarea\+ID
+
+Funcion donde mostramos la tarea que coincide con el id que pasamos por parametro y la devolvemos. 
+\begin{DoxyParams}[1]{Parámetros}
+mixed & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_consultas_tareas_a938d4ac666f17bb7637eef6d5c783ffa}\label{class_consultas_tareas_a938d4ac666f17bb7637eef6d5c783ffa}} 
+\index{ConsultasTareas@{ConsultasTareas}!mostrarTareas@{mostrarTareas}}
+\index{mostrarTareas@{mostrarTareas}!ConsultasTareas@{ConsultasTareas}}
+\doxysubsubsection{\texorpdfstring{mostrarTareas()}{mostrarTareas()}}
+{\footnotesize\ttfamily static mostrar\+Tareas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+mostrar\+Tareas
+
+Funcion donde sacamos todos los valores de la tarea que pedimos y las introducimos en un array para devolverlas. \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_consultas_tareas_a9541c11903231ee5434d0f31be58ca40}\label{class_consultas_tareas_a9541c11903231ee5434d0f31be58ca40}} 
+\index{ConsultasTareas@{ConsultasTareas}!mostrarTareasPendientes@{mostrarTareasPendientes}}
+\index{mostrarTareasPendientes@{mostrarTareasPendientes}!ConsultasTareas@{ConsultasTareas}}
+\doxysubsubsection{\texorpdfstring{mostrarTareasPendientes()}{mostrarTareasPendientes()}}
+{\footnotesize\ttfamily static mostrar\+Tareas\+Pendientes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+mostrar\+Tareas\+Pendientes
+
+Funcion donde sacamos todas las tareas pendientes de la base de datos y las introducimos en un array para devolverlas. \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/marcc/\+One\+Drive/\+Escritorio/\+Proyecto\+PHP/app/models/\mbox{\hyperlink{_consultas_tareas_8php}{Consultas\+Tareas.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,270 @@
+  % Handle batch mode
+  % to overcome problems with too many open files
+  \let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}
+  % Set document class depending on configuration
+  \documentclass[twoside]{book}
+  %% moved from doxygen.sty due to workaround for LaTex 2019 version and unmaintained tabu package
+  \usepackage{ifthen}
+  \ifx\requestedLaTeXdate\undefined
+    \usepackage{array}
+  \else
+    \usepackage{array}[=2016-10-06]
+  \fi
+  %%
+  % Packages required by doxygen
+  \usepackage{fixltx2e} % for \textsubscript
+  \usepackage{doxygen}
+  \usepackage{graphicx}
+  \usepackage[utf8]{inputenc}
+  \usepackage{makeidx}
+  \PassOptionsToPackage{warn}{textcomp}
+  \usepackage{textcomp}
+  \usepackage[nointegrals]{wasysym}
+  \usepackage{ifxetex}
+  % NLS support packages
+  \usepackage[spanish]{babel}
+  % Define default fonts
+  % Font selection
+  \usepackage[T1]{fontenc}
+  % set main and monospaced font
+  \usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\renewcommand{\familydefault}{\sfdefault}
+  \usepackage{sectsty}
+  \allsectionsfont{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \renewcommand{\DoxyLabelFont}{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+   % Arguments of doxygenemoji:
+   % 1) ':<text>:' form of the emoji, already LaTeX-escaped
+   % 2) file with the name of the emoji without the .png extension
+   % in case image exist use this otherwise use the ':<text>:' form
+   \newcommand{\doxygenemoji}[2]{%
+     \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+   }
+  % Page & text layout
+  \usepackage{geometry}
+  \geometry{%
+    a4paper,%
+    top=2.5cm,%
+    bottom=2.5cm,%
+    left=2.5cm,%
+    right=2.5cm%
+  }
+  % Allow a bit of overflow to go unnoticed by other means
+  \tolerance=750
+  \hfuzz=15pt
+  \hbadness=750
+  \setlength{\emergencystretch}{15pt}
+  \setlength{\parindent}{0cm}
+  \newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+  \newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+  \doxynormalparskip
+  % Redefine paragraph/subparagraph environments, using sectsty fonts
+  \makeatletter
+  \renewcommand{\paragraph}{%
+    \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@parafont%
+    }%
+  }
+  \renewcommand{\subparagraph}{%
+    \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@subparafont%
+    }%
+  }
+  \makeatother
+  \makeatletter
+  \newcommand\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern\z@}
+  \makeatother
+  % Headers & footers
+  \usepackage{fancyhdr}
+  \pagestyle{fancyplain}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \fancypagestyle{fancyplain}{
+    \fancyhf{}
+    \fancyhead[LE, RO]{\bfseries\thepage}
+    \fancyhead[LO]{\bfseries\rightmark}
+    \fancyhead[RE]{\bfseries\leftmark}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize Generado por Doxygen }
+  }
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize Generado por Doxygen }
+    \renewcommand{\headrulewidth}{0pt}
+  }
+  \pagestyle{fancyplain}
+  \renewcommand{\chaptermark}[1]{%
+    \markboth{#1}{}%
+  }
+  \renewcommand{\sectionmark}[1]{%
+    \markright{\thesection\ #1}%
+  }
+  % ToC, LoF, LoT, bibliography, and index
+  % Indices & bibliography
+  \usepackage{natbib}
+  \usepackage[titles]{tocloft}
+  \setcounter{tocdepth}{3}
+  \setcounter{secnumdepth}{5}
+  % creating indexes
+  \makeindex
+  \usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+  % Hyperlinks
+    % Hyperlinks (required, but should be loaded last)
+    \ifpdf
+      \usepackage[pdftex,pagebackref=true]{hyperref}
+    \else
+      \ifxetex
+        \usepackage[pagebackref=true]{hyperref}
+      \else
+        \usepackage[ps2pdf,pagebackref=true]{hyperref}
+      \fi
+    \fi
+    \hypersetup{%
+      colorlinks=true,%
+      linkcolor=blue,%
+      citecolor=blue,%
+      unicode,%
+      pdftitle={Proyecto\+PHP},%
+      pdfsubject={Proyecto de php 1r trimiestre}%
+    }
+  % Custom commands used by the header
+  % Custom commands
+  \newcommand{\clearemptydoublepage}{%
+    \newpage{\pagestyle{empty}\cleardoublepage}%
+  }
+  % caption style definition
+  \usepackage{caption}
+  \captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+  % in page table of contents
+  \usepackage{etoc}
+  \etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+  % prevent numbers overlap the titles in toc
+  \renewcommand{\numberline}[1]{#1~}
+% End of preamble, now comes the document contents
+%===== C O N T E N T S =====
+\begin{document}
+  \raggedbottom
+  % Titlepage & ToC
+    % To avoid duplicate page anchors due to reuse of same numbers for
+    % the index (be it as roman numbers)
+    \hypersetup{pageanchor=false,
+                bookmarksnumbered=true,
+                pdfencoding=unicode
+               }
+  \pagenumbering{alph}
+  \begin{titlepage}
+  \vspace*{7cm}
+  \begin{center}%
+  {\Large Proyecto\+PHP}\\
+  [1ex]\large 1 \\
+  \vspace*{1cm}
+  {\large Generado por Doxygen 1.9.5}\\
+  \end{center}
+  \end{titlepage}
+  \clearemptydoublepage
+  \pagenumbering{roman}
+  \tableofcontents
+  \clearemptydoublepage
+  \pagenumbering{arabic}
+  % re-enable anchors again
+  \hypersetup{pageanchor=true}
+%--- Begin generated contents ---
+\chapter{Índice de estructura de datos}
+\input{annotated}
+\chapter{Indice de archivos}
+\input{files}
+\chapter{Documentación de las estructuras de datos}
+\input{class_conexion}
+\input{class_consultas_tareas}
+\input{class_consultas_usuarios}
+\input{class_gestor_errores}
+\input{class_tareas}
+\input{class_usuarios}
+\input{class_validaciones}
+\chapter{Documentación de archivos}
+\input{config_8php}
+\input{tareas_controller_8php}
+\input{usuarios_controller_8php}
+\input{validaciones_8php}
+\input{index_8php}
+\input{blade_8php}
+\input{conexion_p_d_o_8php}
+\input{_consultas_tareas_8php}
+\input{_consultas_usuarios_8php}
+\input{gestorerrores_8php}
+\input{a_xC3_xB1adir_tarea_8blade_8php}
+\input{a_xC3_xB1adir_usuario_8blade_8php}
+\input{0d033b5ea4db9be7c25f363bf96a70ba78a827ae_8php}
+\input{12e75c667fe359b942216dabc32651e0f4db5ce6_8php}
+\input{1ff6d68330a1412aac3b5943241130f6551d3e93_8php}
+\input{25c5961498a5e951304df215f36942446388ed2d_8php}
+\input{2baa60fdab000c0682aba017298e741904de87ec_8php}
+\input{2f7cf750c31cef681774a752dab0de52afaccb84_8php}
+\input{351dee647949adf4962880a5ae8c6ec2e13fa6d9_8php}
+\input{3a07a3ef9ab9ea28a42233cfbf196eac38d2dc67_8php}
+\input{4062c0c2819e594acb01edbf9e363a4c573f95ac_8php}
+\input{44d6672fb8647f08e6ff1475e5d616e574e846b5_8php}
+\input{4ae95602ded3cd45442f65f4bfaec97f99c244fe_8php}
+\input{4c3d4d70a7e41fc53fc5abbddf716ad92c361765_8php}
+\input{518791495143076147a0aa774a03031c9f5ed491_8php}
+\input{570ca3a1b17cd69824c6615a71eff871530ee8b2_8php}
+\input{601daf89158a01fd501602250768d35e6aaacafb_8php}
+\input{60983ce29860bc985b42442c0bd35f4bb1030613_8php}
+\input{7656b783792930d9179d68787a2a75b612e902df_8php}
+\input{7830c8766791224d0d333fd55f2f3cd7f43ea5d4_8php}
+\input{7ef3723d18c4180ce4037a3788a4bc81a86ee621_8php}
+\input{81fd655a99a672628314718c41a192a0265b6093_8php}
+\input{8279dcd8af59587d747e83ac1c8ff6283ffe3b42_8php}
+\input{84188d4553c3cf87ae72afb165f7e461249a9733_8php}
+\input{90ea828efb1e277f12e839fcc89adb6c71dc9ccf_8php}
+\input{969d11fd1a7cfb4988762867a9560eca3d04ea32_8php}
+\input{980c566b5b337816cd41b1d32aca4d7836d949a8_8php}
+\input{a8dfb7a3221d382f4de9bba93b9ff83e623a7f21_8php}
+\input{ac1827b63673f8f00fe821d518a6305853071b93_8php}
+\input{b20a1636c6a7334dbd44c10365a9581072ff5676_8php}
+\input{b9da6adda93aefd801d0249eaf8bd15188d0f5d3_8php}
+\input{ba6a705471933c908417ac834835dbeb0d06cd0b_8php}
+\input{bae1414d3904c55d07321a90b5a5704beffb9ddf_8php}
+\input{baef6990654632dd28febd1c75a723589959d9a2_8php}
+\input{bb14b5bc24bb1a4a1499200220e1af71bac13942_8php}
+\input{c4310ed781e6cc5f1c9581b3b2714f4ae19c5097_8php}
+\input{c764b5809a63c73b12024c2bfafa3d29937300b2_8php}
+\input{c819c9dee23f0eb34336b3df1e113aaa608ffec2_8php}
+\input{ca6c0bd053eb933b5fb28e889661398312a08c54_8php}
+\input{cadcb1052e3e8931097c4fd9841625eef931a2a5_8php}
+\input{cd0ee822b4f904803fb9c4a136192b7e6fcc8f86_8php}
+\input{d69519c96268b5485119063e73747b96e8b58f69_8php}
+\input{dcd0316fb5ff233b7c5c5d93bf3fecd2e610b986_8php}
+\input{e3d29c7a2cdbdacfc1db187f86d17e872e24b807_8php}
+\input{ed465b66f6f9dc372fc84197d84a4b74e2fa79ad_8php}
+\input{f94fe7a58485d2ad55dbe505fd801d71c3936ded_8php}
+\input{completar_tarea_8blade_8php}
+\input{eliminar_tarea_8blade_8php}
+\input{eliminar_usuario_8blade_8php}
+\input{lista_tareas_8blade_8php}
+\input{lista_tareas_pendientes_8blade_8php}
+\input{lista_usuarios_8blade_8php}
+\input{login_8blade_8php}
+\input{modificar_tarea_8blade_8php}
+\input{modificar_usuario_8blade_8php}
+\input{plantilla_tareas_8blade_8php}
+\input{plantilla_usuarios_8blade_8php}
+\input{tarea_completa_8blade_8php}
+%--- End generated contents ---
+% Index
+  \backmatter
+  \newpage
+  \phantomsection
+  \clearemptydoublepage
+  \addcontentsline{toc}{chapter}{\indexname}
+  \printindex
+% Required for some languages (in combination with latexdocumentpre from the header)
+\end{document}

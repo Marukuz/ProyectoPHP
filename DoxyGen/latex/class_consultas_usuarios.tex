@@ -1,0 +1,141 @@
+\hypertarget{class_consultas_usuarios}{}\doxysection{Referencia de la Clase Consultas\+Usuarios}
+\label{class_consultas_usuarios}\index{ConsultasUsuarios@{ConsultasUsuarios}}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_consultas_usuarios_a90264fcc546816efb5e3660c85fd2a86}{get\+Usuario}} (\$nombre, \$contraseña)
+\item 
+static \mbox{\hyperlink{class_consultas_usuarios_a8ef7142cf3bd3dd9ff31db85e3dbe735}{ver\+Usuarios}} ()
+\item 
+static \mbox{\hyperlink{class_consultas_usuarios_a08adb846e20e8f8949f9ffef99e561c0}{añadir\+Usuario}} (\$nombre, \$password, \$rol)
+\item 
+static \mbox{\hyperlink{class_consultas_usuarios_a3b3a96509304caf6c0002207f1402a0f}{mostrar\+Usuario\+ID}} (\$id)
+\item 
+static \mbox{\hyperlink{class_consultas_usuarios_aa8347d5029fed311ff8133dea68ccd37}{eliminar\+Usuario}} (\$id)
+\item 
+static \mbox{\hyperlink{class_consultas_usuarios_a089af96a2fdd05d22b05451742d590bb}{modificar\+Usuario}} (\$id, \$nombre, \$contraseña, \$rol)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\mbox{\hyperlink{class_consultas_usuarios}{Consultas\+Usuarios}}
+
+Clase donde hacemos todas las consultas a la base de datos relacionadas con los \mbox{\hyperlink{class_usuarios}{Usuarios}}. 
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_consultas_usuarios_a08adb846e20e8f8949f9ffef99e561c0}\label{class_consultas_usuarios_a08adb846e20e8f8949f9ffef99e561c0}} 
+\index{ConsultasUsuarios@{ConsultasUsuarios}!añadirUsuario@{añadirUsuario}}
+\index{añadirUsuario@{añadirUsuario}!ConsultasUsuarios@{ConsultasUsuarios}}
+\doxysubsubsection{\texorpdfstring{añadirUsuario()}{añadirUsuario()}}
+{\footnotesize\ttfamily static añadir\+Usuario (\begin{DoxyParamCaption}\item[{}]{\$nombre,  }\item[{}]{\$password,  }\item[{}]{\$rol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+añadir\+Usuario
+
+Funcion donde añadimos a la base de datos un usuario con los datos pasados por parametro.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+mixed & {\em \$nombre} & \\
+\hline
+mixed & {\em \$password} & \\
+\hline
+mixed & {\em \$rol} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_consultas_usuarios_aa8347d5029fed311ff8133dea68ccd37}\label{class_consultas_usuarios_aa8347d5029fed311ff8133dea68ccd37}} 
+\index{ConsultasUsuarios@{ConsultasUsuarios}!eliminarUsuario@{eliminarUsuario}}
+\index{eliminarUsuario@{eliminarUsuario}!ConsultasUsuarios@{ConsultasUsuarios}}
+\doxysubsubsection{\texorpdfstring{eliminarUsuario()}{eliminarUsuario()}}
+{\footnotesize\ttfamily static eliminar\+Usuario (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+eliminar\+Usuario
+
+Funcion que elimina un usuario en concreto el cual identificamos mediante el parametro que pasamos.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+mixed & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_consultas_usuarios_a90264fcc546816efb5e3660c85fd2a86}\label{class_consultas_usuarios_a90264fcc546816efb5e3660c85fd2a86}} 
+\index{ConsultasUsuarios@{ConsultasUsuarios}!getUsuario@{getUsuario}}
+\index{getUsuario@{getUsuario}!ConsultasUsuarios@{ConsultasUsuarios}}
+\doxysubsubsection{\texorpdfstring{getUsuario()}{getUsuario()}}
+{\footnotesize\ttfamily static get\+Usuario (\begin{DoxyParamCaption}\item[{}]{\$nombre,  }\item[{}]{\$contraseña }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+get\+Usuario
+
+Funcion donde pedimos un usuario donde el nombre y contraseña coincidan con el pasado por parametro y lo devolvemos.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+mixed & {\em \$nombre} & \\
+\hline
+mixed & {\em \$contrase} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_consultas_usuarios_a089af96a2fdd05d22b05451742d590bb}\label{class_consultas_usuarios_a089af96a2fdd05d22b05451742d590bb}} 
+\index{ConsultasUsuarios@{ConsultasUsuarios}!modificarUsuario@{modificarUsuario}}
+\index{modificarUsuario@{modificarUsuario}!ConsultasUsuarios@{ConsultasUsuarios}}
+\doxysubsubsection{\texorpdfstring{modificarUsuario()}{modificarUsuario()}}
+{\footnotesize\ttfamily static modificar\+Usuario (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$nombre,  }\item[{}]{\$contraseña,  }\item[{}]{\$rol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+modificar\+Usuario
+
+Funcion que nos permite modificar un usuario mediante los parametros recibidos. 
+\begin{DoxyParams}[1]{Parámetros}
+mixed & {\em \$id} & \\
+\hline
+mixed & {\em \$nombre} & \\
+\hline
+mixed & {\em \$contrase} & \\
+\hline
+mixed & {\em \$rol} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_consultas_usuarios_a3b3a96509304caf6c0002207f1402a0f}\label{class_consultas_usuarios_a3b3a96509304caf6c0002207f1402a0f}} 
+\index{ConsultasUsuarios@{ConsultasUsuarios}!mostrarUsuarioID@{mostrarUsuarioID}}
+\index{mostrarUsuarioID@{mostrarUsuarioID}!ConsultasUsuarios@{ConsultasUsuarios}}
+\doxysubsubsection{\texorpdfstring{mostrarUsuarioID()}{mostrarUsuarioID()}}
+{\footnotesize\ttfamily static mostrar\+Usuario\+ID (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+mostrar\+Usuario\+ID
+
+Funcion donde mostramos un usuario en especifico mediante la id que pasamos por parametro 
+\begin{DoxyParams}[1]{Parámetros}
+mixed & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_consultas_usuarios_a8ef7142cf3bd3dd9ff31db85e3dbe735}\label{class_consultas_usuarios_a8ef7142cf3bd3dd9ff31db85e3dbe735}} 
+\index{ConsultasUsuarios@{ConsultasUsuarios}!verUsuarios@{verUsuarios}}
+\index{verUsuarios@{verUsuarios}!ConsultasUsuarios@{ConsultasUsuarios}}
+\doxysubsubsection{\texorpdfstring{verUsuarios()}{verUsuarios()}}
+{\footnotesize\ttfamily static ver\+Usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+ver\+Usuarios
+
+Funcion donde cojemos todos los usuarios existentes de la base de datos y los devolvemos mediante un array.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/marcc/\+One\+Drive/\+Escritorio/\+Proyecto\+PHP/app/models/\mbox{\hyperlink{_consultas_usuarios_8php}{Consultas\+Usuarios.\+php}}\end{DoxyCompactItemize}

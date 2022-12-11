@@ -1,0 +1,111 @@
+\hypertarget{class_gestor_errores}{}\doxysection{Referencia de la Clase Gestor\+Errores}
+\label{class_gestor_errores}\index{GestorErrores@{GestorErrores}}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gestor_errores_a659daee216488cc146119e91c5ba6ff5}{\+\_\+\+\_\+construct}} (\$format\+\_\+prefix=\textquotesingle{}\textquotesingle{}, \$format\+\_\+sufix=\textquotesingle{}\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_gestor_errores_a68e718488cf69bd7270077d14522361d}{Anota\+Error}} (\$campo, \$descripcion)
+\item 
+\mbox{\hyperlink{class_gestor_errores_afd9129fe2444c1b081b533ba4745404b}{Hay\+Errores}} ()
+\item 
+\mbox{\hyperlink{class_gestor_errores_a66ec7cd0f027a04e14b0c9e9a9187ff5}{Hay\+Error}} (\$campo)
+\item 
+\mbox{\hyperlink{class_gestor_errores_aadc633f52065391d6fefb6b53074e02c}{Error}} (\$campo)
+\item 
+\mbox{\hyperlink{class_gestor_errores_a63062fc59cc3b5c9b7c11a7ea6557a57}{Error\+Formateado}} (\$campo)
+\item 
+\mbox{\hyperlink{class_gestor_errores_a7645930c2f1041508be21186cee85e0a}{imprimir\+Errores}} (\$errores)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase que me permitirá llevar un registro de los errores que se producen 
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_gestor_errores_a659daee216488cc146119e91c5ba6ff5}\label{class_gestor_errores_a659daee216488cc146119e91c5ba6ff5}} 
+\index{GestorErrores@{GestorErrores}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$format\+\_\+prefix = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$format\+\_\+sufix = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Crea el gestor de errores y anota las etiquetas que se muestran antes y después en caso de queramos salida formateada 
+\begin{DoxyParams}[1]{Parámetros}
+type & {\em \$format\+\_\+prefix} & \\
+\hline
+type & {\em \$format\+\_\+sufix} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_gestor_errores_a68e718488cf69bd7270077d14522361d}\label{class_gestor_errores_a68e718488cf69bd7270077d14522361d}} 
+\index{GestorErrores@{GestorErrores}!AnotaError@{AnotaError}}
+\index{AnotaError@{AnotaError}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{AnotaError()}{AnotaError()}}
+{\footnotesize\ttfamily Anota\+Error (\begin{DoxyParamCaption}\item[{}]{\$campo,  }\item[{}]{\$descripcion }\end{DoxyParamCaption})}
+
+Anota un error para un campo en nuestro gestor de errores 
+\begin{DoxyParams}[1]{Parámetros}
+type & {\em \$campo} & \\
+\hline
+type & {\em \$descripcion} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gestor_errores_aadc633f52065391d6fefb6b53074e02c}\label{class_gestor_errores_aadc633f52065391d6fefb6b53074e02c}} 
+\index{GestorErrores@{GestorErrores}!Error@{Error}}
+\index{Error@{Error}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{Error()}{Error()}}
+{\footnotesize\ttfamily Error (\begin{DoxyParamCaption}\item[{}]{\$campo }\end{DoxyParamCaption})}
+
+Devuelve la descripción de error para un campo o una cadaena vacia si no hay 
+\begin{DoxyParams}[1]{Parámetros}
+type & {\em \$campo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_errores_a63062fc59cc3b5c9b7c11a7ea6557a57}\label{class_gestor_errores_a63062fc59cc3b5c9b7c11a7ea6557a57}} 
+\index{GestorErrores@{GestorErrores}!ErrorFormateado@{ErrorFormateado}}
+\index{ErrorFormateado@{ErrorFormateado}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{ErrorFormateado()}{ErrorFormateado()}}
+{\footnotesize\ttfamily Error\+Formateado (\begin{DoxyParamCaption}\item[{}]{\$campo }\end{DoxyParamCaption})}
+
+Devuelve la descripción del error o cadena vacia si no hay 
+\begin{DoxyParams}[1]{Parámetros}
+type & {\em \$campo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_errores_a66ec7cd0f027a04e14b0c9e9a9187ff5}\label{class_gestor_errores_a66ec7cd0f027a04e14b0c9e9a9187ff5}} 
+\index{GestorErrores@{GestorErrores}!HayError@{HayError}}
+\index{HayError@{HayError}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{HayError()}{HayError()}}
+{\footnotesize\ttfamily Hay\+Error (\begin{DoxyParamCaption}\item[{}]{\$campo }\end{DoxyParamCaption})}
+
+Indica si hay error en un campo \begin{DoxyReturn}{Devuelve}
+boolean 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_errores_afd9129fe2444c1b081b533ba4745404b}\label{class_gestor_errores_afd9129fe2444c1b081b533ba4745404b}} 
+\index{GestorErrores@{GestorErrores}!HayErrores@{HayErrores}}
+\index{HayErrores@{HayErrores}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{HayErrores()}{HayErrores()}}
+{\footnotesize\ttfamily Hay\+Errores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Indica si hay errores \begin{DoxyReturn}{Devuelve}
+boolean 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_errores_a7645930c2f1041508be21186cee85e0a}\label{class_gestor_errores_a7645930c2f1041508be21186cee85e0a}} 
+\index{GestorErrores@{GestorErrores}!imprimirErrores@{imprimirErrores}}
+\index{imprimirErrores@{imprimirErrores}!GestorErrores@{GestorErrores}}
+\doxysubsubsection{\texorpdfstring{imprimirErrores()}{imprimirErrores()}}
+{\footnotesize\ttfamily imprimir\+Errores (\begin{DoxyParamCaption}\item[{}]{\$errores }\end{DoxyParamCaption})}
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/marcc/\+One\+Drive/\+Escritorio/\+Proyecto\+PHP/app/models/\mbox{\hyperlink{gestorerrores_8php}{gestorerrores.\+php}}\end{DoxyCompactItemize}

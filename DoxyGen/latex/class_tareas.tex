@@ -1,0 +1,116 @@
+\hypertarget{class_tareas}{}\doxysection{Referencia de la Clase Tareas}
+\label{class_tareas}\index{Tareas@{Tareas}}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_tareas_a938d4ac666f17bb7637eef6d5c783ffa}{mostrar\+Tareas}} ()
+\item 
+static \mbox{\hyperlink{class_tareas_a9541c11903231ee5434d0f31be58ca40}{mostrar\+Tareas\+Pendientes}} ()
+\item 
+static \mbox{\hyperlink{class_tareas_aa003bb580815d52f1d3e4d86d3b5d1ee}{mostrar\+Tarea\+Completa}} ()
+\item 
+static \mbox{\hyperlink{class_tareas_a85ef6a2cc6a6d39efd6fa87331c91a45}{modificar\+Tarea}} ()
+\item 
+static \mbox{\hyperlink{class_tareas_a607ced24bcda2965bf36fccd32652987}{añadir\+Tarea}} ()
+\item 
+static \mbox{\hyperlink{class_tareas_a8e5caa190e8daae8fa00ef9287060a96}{eliminar\+Tarea\+Vista}} ()
+\item 
+static \mbox{\hyperlink{class_tareas_a3ff434309ca2fa2f43d746968f8ed235}{eliminar\+Tarea}} ()
+\item 
+static \mbox{\hyperlink{class_tareas_ab2df93f4af613ba15d66c9dd44f126ce}{completar\+Tarea}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\mbox{\hyperlink{class_tareas}{Tareas}}
+
+Clase donde almacenamos todas las funciones de las tareas. 
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_tareas_a607ced24bcda2965bf36fccd32652987}\label{class_tareas_a607ced24bcda2965bf36fccd32652987}} 
+\index{Tareas@{Tareas}!añadirTarea@{añadirTarea}}
+\index{añadirTarea@{añadirTarea}!Tareas@{Tareas}}
+\doxysubsubsection{\texorpdfstring{añadirTarea()}{añadirTarea()}}
+{\footnotesize\ttfamily static añadir\+Tarea (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+añadir\+Tarea
+
+Aqui renderizamos la vista y filtramos los datos que nos llegan para seguidamente añadirlos a la BBDD. \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tareas_ab2df93f4af613ba15d66c9dd44f126ce}\label{class_tareas_ab2df93f4af613ba15d66c9dd44f126ce}} 
+\index{Tareas@{Tareas}!completarTarea@{completarTarea}}
+\index{completarTarea@{completarTarea}!Tareas@{Tareas}}
+\doxysubsubsection{\texorpdfstring{completarTarea()}{completarTarea()}}
+{\footnotesize\ttfamily static completar\+Tarea (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+completar\+Tarea
+
+Renderizamos la vista y modificamos los parametros recibidos via \$\+\_\+\+POST \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tareas_a3ff434309ca2fa2f43d746968f8ed235}\label{class_tareas_a3ff434309ca2fa2f43d746968f8ed235}} 
+\index{Tareas@{Tareas}!eliminarTarea@{eliminarTarea}}
+\index{eliminarTarea@{eliminarTarea}!Tareas@{Tareas}}
+\doxysubsubsection{\texorpdfstring{eliminarTarea()}{eliminarTarea()}}
+{\footnotesize\ttfamily static eliminar\+Tarea (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+eliminar\+Tarea
+
+Aqui cojemos el parametro \char`\"{}id\char`\"{} si anteriormente hemos activado la funcion para eliminar la tarea de la misma id. \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tareas_a8e5caa190e8daae8fa00ef9287060a96}\label{class_tareas_a8e5caa190e8daae8fa00ef9287060a96}} 
+\index{Tareas@{Tareas}!eliminarTareaVista@{eliminarTareaVista}}
+\index{eliminarTareaVista@{eliminarTareaVista}!Tareas@{Tareas}}
+\doxysubsubsection{\texorpdfstring{eliminarTareaVista()}{eliminarTareaVista()}}
+{\footnotesize\ttfamily static eliminar\+Tarea\+Vista (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+eliminar\+Tarea\+Vista
+
+Aqui renderizamos la vista y pasamos por parametro la tarea que hemos seleccionado por id para seguidamente mostrarla. \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tareas_a85ef6a2cc6a6d39efd6fa87331c91a45}\label{class_tareas_a85ef6a2cc6a6d39efd6fa87331c91a45}} 
+\index{Tareas@{Tareas}!modificarTarea@{modificarTarea}}
+\index{modificarTarea@{modificarTarea}!Tareas@{Tareas}}
+\doxysubsubsection{\texorpdfstring{modificarTarea()}{modificarTarea()}}
+{\footnotesize\ttfamily static modificar\+Tarea (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+modificar\+Tarea
+
+Aqui renderizamos la vista y filtramos los datos que nos llegan para seguidamente modificarlos en la BBDD. \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tareas_aa003bb580815d52f1d3e4d86d3b5d1ee}\label{class_tareas_aa003bb580815d52f1d3e4d86d3b5d1ee}} 
+\index{Tareas@{Tareas}!mostrarTareaCompleta@{mostrarTareaCompleta}}
+\index{mostrarTareaCompleta@{mostrarTareaCompleta}!Tareas@{Tareas}}
+\doxysubsubsection{\texorpdfstring{mostrarTareaCompleta()}{mostrarTareaCompleta()}}
+{\footnotesize\ttfamily static mostrar\+Tarea\+Completa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+mostrar\+Tarea\+Completa Aqui renderizamos la vista y pasamos por parametro una tarea completa en concreto. \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tareas_a938d4ac666f17bb7637eef6d5c783ffa}\label{class_tareas_a938d4ac666f17bb7637eef6d5c783ffa}} 
+\index{Tareas@{Tareas}!mostrarTareas@{mostrarTareas}}
+\index{mostrarTareas@{mostrarTareas}!Tareas@{Tareas}}
+\doxysubsubsection{\texorpdfstring{mostrarTareas()}{mostrarTareas()}}
+{\footnotesize\ttfamily static mostrar\+Tareas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+mostrar\+Tareas Aqui renderizamos la vista y pasamos por parametro las tareas existentes. \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tareas_a9541c11903231ee5434d0f31be58ca40}\label{class_tareas_a9541c11903231ee5434d0f31be58ca40}} 
+\index{Tareas@{Tareas}!mostrarTareasPendientes@{mostrarTareasPendientes}}
+\index{mostrarTareasPendientes@{mostrarTareasPendientes}!Tareas@{Tareas}}
+\doxysubsubsection{\texorpdfstring{mostrarTareasPendientes()}{mostrarTareasPendientes()}}
+{\footnotesize\ttfamily static mostrar\+Tareas\+Pendientes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+mostrar\+Tareas\+Pendientes Aqui renderizamos la vista y pasamos por parametro las tareas que estan pendientes. \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/marcc/\+One\+Drive/\+Escritorio/\+Proyecto\+PHP/app/controllers/\mbox{\hyperlink{tareas_controller_8php}{tareas\+Controller.\+php}}\end{DoxyCompactItemize}
