@@ -41,7 +41,7 @@
             Estado Tarea: <br>
             <input class="form-check-input" type="radio" name="estado" value="B"> B |
             <input class="form-check-input" type="radio" name="estado" value="P"> P |
-            <input class="form-check-input" type="radio" name="estado" value="R"> R |
+            <input class="form-check-input" type="radio" name="estado" value="R" checked> R |
             <input class="form-check-input" type="radio" name="estado" value="C"> C
             <br><br>
             Fecha creacion: <br>

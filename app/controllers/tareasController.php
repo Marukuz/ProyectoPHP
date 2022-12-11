@@ -186,8 +186,7 @@ class Tareas{
                 'tarea'=>$tarea
             ]);
         }
-
-        
     }
+    
     
 }
