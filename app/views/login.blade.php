@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form>
+    <form method="post">
         <section class="vh-100" style="background-color: #508bfc;">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
@@ -19,14 +19,14 @@
                             <div class="card-body p-5 text-center">
                                 <h3 class="mb-5">Login</h3>
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="typeEmailX-2">Usuario</label>
-                                    <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
+                                    <label class="form-label">Usuario</label>
+                                    <input type="text" name="usuario" class="form-control form-control-lg" />
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="typePasswordX-2">Contraseña</label>
-                                    <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />                        
+                                    <input type="password" id="typePasswordX-2" name="password" class="form-control form-control-lg" />                        
                                 </div>
-                                <a href="index.php?controller=tareasController&action=Tareas::mostrarTareas"><p>Loguearse</p></a>
+                                <button type="submit" class="btn btn-primary">Loguearse</button>
                             </div>
                         </div>
                     </div>

@@ -20,6 +20,7 @@
                     <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::añadirTarea">Añadir tarea</a>
                 </div>
             </div>
+            <a class="nav-link" href="index.php?controller=usuariosController&action=Usuarios::desloguearse"><button>Log Out</button></a>
         </div>
     </nav>
 </header>

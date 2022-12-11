@@ -1,7 +1,7 @@
 <?php
 require_once 'conexionPDO.php';
 
-class Consultas{
+class ConsultasTareas{
 
     public static function mostrarTareas() {
         $base = Conexion::getInstance();
@@ -97,12 +97,12 @@ class Consultas{
         }
         return $tareas;
     }
-        
+
     public static function completarTarea($id,$estado,$anotacioni,$anotacionf){
         $base = Conexion::getInstance();
         $sql="UPDATE tareas SET tarea_id='$id', estado_tarea='$estado',  anotacion_inicio='$anotacioni', anotacion_final='$anotacionf' WHERE tarea_id='$id'";
         $result =$base->base->prepare($sql);
         $result -> execute();
     }
-    
+
 }

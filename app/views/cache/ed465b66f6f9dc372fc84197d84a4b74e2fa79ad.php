@@ -32,9 +32,8 @@
         </tr>
     </table>
     <div style="text-align: center;">
-        <a href="index.php?controller=tareasController&action=eliminarTarea&id=<?php echo e($tarea['tarea_id']); ?>"><button class="btn btn-danger">Si</button></a>
-        
-        <a href="index.php?controller=tareasController&action=mostrarTareas"><button class="btn btn-success">No</button></a>
+        <a href="index.php?controller=tareasController&action=Tareas::eliminarTarea&id=<?php echo e($tarea['tarea_id']); ?>"><button class="btn btn-danger">Si</button></a>
+        <a href="index.php?controller=tareasController&action=Tareas::mostrarTareas"><button class="btn btn-success">No</button></a>
     </div>
   </div>
 <?php $__env->stopSection(); ?>
