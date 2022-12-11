@@ -24,7 +24,41 @@ class Usuarios{
 
     public static function verUsuarios(){
         require('models/blade.php');
+        require('models/ConsultasUsuarios.php');
 
-        echo $blade->render('listausuarios');
+        $mostrarUsuarios = ConsultasUsuarios::verUsuarios();
+        
+        echo $blade->render('listausuarios',[
+            'usuarios'=>$mostrarUsuarios
+        ]);
+    }
+
+    public static function añadirUsuario(){
+        require('models/ConsultasUsuarios.php');
+        require('models/blade.php');
+        require('models/gestorerrores.php');
+        require('validaciones.php');
+
+        $error=new GestorErrores('<span style="color: red;">','</span>');
+        if($_POST){
+            Validaciones::filtradoUsuarios($error,$_POST['usuario'],$_POST['password'],filter_input(INPUT_POST,'rol'));
+            $usuarios = [];
+            array_push($usuarios,$_POST['usuario'],$_POST['password'],filter_input(INPUT_POST,'rol'));
+            if(!$error->HayErrores()){
+                ConsultasUsuarios::añadirUsuario($_POST['usuario'],$_POST['password'],filter_input(INPUT_POST,'rol'));
+                echo $blade->render('añadirusuario',[
+                    'error'=>$error,'usuario'=>$usuarios
+                ]);
+            }else{
+                echo $blade->render('añadirusuario',[
+                    'error'=>$error,'usuario'=>$usuarios
+                ]);
+            }
+
+        }else{
+            echo $blade->render('añadirusuario',[
+                'error'=>$error
+            ]);
+        }
     }
 }

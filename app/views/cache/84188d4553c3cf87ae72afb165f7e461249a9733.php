@@ -4,11 +4,24 @@
     <table class="table">
       <thead>
         <tr>
+          <th scope="col">ID</th>
           <th scope="col">Nombre</th>
+          <th scope="col">Contraseña</th>
           <th scope="col">Rol</th>
+          <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
+      <?php $__currentLoopData = $usuarios; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $usuario): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
+        <tr>
+          <td><?php echo e($usuario['usuario_id']); ?></td>
+          <td><?php echo e($usuario['nombre']); ?></td>
+          <td><?php echo e($usuario['contraseña']); ?></td>
+          <td><?php echo e($usuario['rol']); ?></td>
+          <td><a href="index.php?controller=tareasController&action=Tareas::mostrarTareaCompleta&id=<?php echo e($tareas['tarea_id']); ?>"><button class="btn btn-danger">Eliminar</button></a>
+          <a href="index.php?controller=tareasController&action=Tareas::modificarTarea&id=<?php echo e($tareas['tarea_id']); ?>"><button class="btn btn-warning">Modificar</button></a></td>
+        </tr>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
       </tbody>
     </table>
   </div>

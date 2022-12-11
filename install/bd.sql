@@ -21,3 +21,10 @@ CREATE TABLE `tareas` (
   `anotacion_final` varchar(45) DEFAULT NULL,
   PRIMARY KEY (tarea_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `usuarios`(
+  `usuario_id` int(6) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) NOT NULL,
+  `contraseña` varchar(45) NOT NULL,
+  `rol` varchar(45) NOT NULL,
+  PRIMARY KEY (usuario_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

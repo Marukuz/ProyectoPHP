@@ -127,5 +127,18 @@ class Validaciones
         }
         return $error;
     }
+    public static function filtradoUsuarios($error,$nombre,$contraseña,$rol){
+    
+        if(self::validarVacio($nombre)){
+            $error->AnotaError('nombre','No has introducido un nombre');
+        }
+        if(self::validarVacio($contraseña)){
+            $error->AnotaError('contraseña','No has introducido una contraseña');
+        }
+        if(self::validarVacio($rol)){
+            $error->AnotaError('rol','No has introducido ningun rol');
+        }
+        return $error;
+    }
     
 }
