@@ -1,7 +1,20 @@
 <?php
 
+/**
+ * Usuarios
+ * 
+ * Clase donde almacenamos todo lo referente a las vistas de usuario.
+ * 
+ */
 class Usuarios{
-
+    
+    /**
+     * loguearse
+     *
+     * Funcion para la vista loguin que identifica si el usuario y 
+     * contraseña introducido es valido y renderiza la vista correspondiente
+     * @return void
+     */
     public static function loguearse(){
         require('models/ConsultasUsuarios.php');
         require('models/ConsultasTareas.php');
@@ -21,7 +34,14 @@ class Usuarios{
             echo $blade->render('login');
         }     
     }
-
+    
+    /**
+     * verUsuarios
+     *
+     * Funcion para almacenar todos los usuarios existentes en la BBDD en una variable y renderizarlo.
+     * 
+     * @return void
+     */
     public static function verUsuarios(){
         require('models/blade.php');
         require('models/ConsultasUsuarios.php');
@@ -32,7 +52,13 @@ class Usuarios{
             'usuarios'=>$mostrarUsuarios
         ]);
     }
-
+    
+    /**
+     * añadirUsuario
+     *
+     * Funcion para añadir un usuario enviado desde el formulario y seguidamente si pasa el filtrado añadirlo a la BBDD
+     * @return void
+     */
     public static function añadirUsuario(){
         require('models/ConsultasUsuarios.php');
         require('models/blade.php');
@@ -61,6 +87,14 @@ class Usuarios{
             ]);
         }
     }
+        
+    /**
+     * eliminarUsuarioVista
+     *
+     * Funcion para renderizar la tarea que queremos eliminar y elegir si queremos eliminarla o no.
+     * 
+     * @return void
+     */
     public static function eliminarUsuarioVista(){
         require('models/ConsultasUsuarios.php');
         require('models/blade.php');
@@ -72,7 +106,13 @@ class Usuarios{
             'usuario'=>$usuario        
         ]);
     }
-    
+        
+    /**
+     * eliminarUsuario
+     *
+     * Funcion que elimina el usuario que le pasamos por $id
+     * @return void
+     */
     public static function eliminarUsuario(){
         require('models/ConsultasUsuarios.php');
         require('models/blade.php');
