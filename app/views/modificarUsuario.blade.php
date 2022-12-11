@@ -1,6 +1,6 @@
 @extends('plantillaUsuarios')
 @section('contenido')
-    <h1 style="text-align: center;">Modificar tarea</h1><br>
+    <h1 style="text-align: center;">Modificar Usuario</h1><br>
     <div id="formulario" >
         <form method="post">
             ID Tarea: <br>
@@ -23,7 +23,7 @@
             </select><br>
             <div style="text-align: center;">
                 <input type="submit" class="btn btn-primary" value="Modificar">
-            </div>
+            </div><br><br>
         </form>
     </div>
 </body>
