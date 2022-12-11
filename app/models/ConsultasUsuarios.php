@@ -91,7 +91,17 @@ class ConsultasUsuarios{
         $result = $base->base->prepare($sql);
         $result -> execute();
     }
-
+    
+    /**
+     * modificarUsuario
+     *
+     * Funcion que nos permite modificar un usuario mediante los parametros recibidos.
+     * @param  mixed $id
+     * @param  mixed $nombre
+     * @param  mixed $contrase
+     * @param  mixed $rol
+     * @return void
+     */
     public static function modificarUsuario($id,$nombre,$contraseña,$rol){
         $base = Conexion::getInstance();
         $sql="UPDATE usuarios SET usuario_id='$id', nombre='$nombre',contraseña='$contraseña',rol='$rol' WHERE usuario_id='$id'";

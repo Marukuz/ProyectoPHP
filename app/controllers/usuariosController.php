@@ -124,7 +124,13 @@ class Usuarios{
             'usuarios'=>$mostrarUsuarios
         ]);
     }
-
+    
+    /**
+     * modificarUsuario
+     *
+     * Funcion que nos permite modificar un usuario si pasa el filtrado de errores.
+     * @return void
+     */
     public static function modificarUsuario(){
         require('models/ConsultasUsuarios.php');
         require('models/blade.php');
