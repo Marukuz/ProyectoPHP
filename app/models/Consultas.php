@@ -5,7 +5,7 @@ class Consultas{
 
     public static function mostrarTareas() {
         $base = Conexion::getInstance();
-        $sql ="SELECT tarea_id, nombre, apellido, telefono, poblacion, provincia, estado_tarea, descripcion, anotacion_inicio, fecha_realizacion FROM tareas ORDER BY fecha_realizacion";
+        $sql ="SELECT tarea_id, nombre, apellido, telefono, poblacion, provincia, estado_tarea,operario_encargado, descripcion, anotacion_inicio, fecha_realizacion FROM tareas ORDER BY fecha_realizacion";
         $result = $base->base->prepare($sql);
         $result->execute();
         $tareas = [];
