@@ -26,7 +26,7 @@
                                     <label class="form-label" for="typePasswordX-2">Contraseña</label>
                                     <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />                        
                                 </div>
-                                <a href="index.php?controller=tareasController&action=mostrarTareas"><p>Loguearse</p></a>
+                                <a href="index.php?controller=tareasController&action=Tareas::mostrarTareas"><p>Loguearse</p></a>
                             </div>
                         </div>
                     </div>

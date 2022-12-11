@@ -33,10 +33,10 @@
           <td><?php echo e($tareas['descripcion']); ?></td>
           <td><?php echo e($tareas['anotacion_inicio']); ?></td>
           <td><?php echo e($tareas['fecha_realizacion']); ?></td>
-          <td><a href="index.php?controller=tareasController&action=mostrarTareaCompleta&id=<?php echo e($tareas['tarea_id']); ?>"><button>Ver</button></a>
-          <a href="index.php?controller=tareasController&action=modificarTarea&id=<?php echo e($tareas['tarea_id']); ?>"><button>Modificar</button></a>
-          <a href="index.php?controller=tareasController&action=eliminarTareaVista&id=<?php echo e($tareas['tarea_id']); ?>"><button>Eliminar</button></a>
-          <a href="index.php?controller=tareasController&action=completarTarea&id=<?php echo e($tareas['tarea_id']); ?>"><button>Completar</button></a></td>
+          <td><a href="index.php?controller=tareasController&action=Tareas::mostrarTareaCompleta&id=<?php echo e($tareas['tarea_id']); ?>"><button>Ver</button></a>
+          <a href="index.php?controller=tareasController&action=Tareas::modificarTarea&id=<?php echo e($tareas['tarea_id']); ?>"><button>Modificar</button></a>
+          <a href="index.php?controller=tareasController&action=Tareas::eliminarTareaVista&id=<?php echo e($tareas['tarea_id']); ?>"><button>Eliminar</button></a>
+          <a href="index.php?controller=tareasController&action=Tareas::completarTarea&id=<?php echo e($tareas['tarea_id']); ?>"><button>Completar</button></a></td>
           
         </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

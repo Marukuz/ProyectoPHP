@@ -15,9 +15,9 @@
             <a class="navbar-brand" href="#">Inicio</a>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="index.php?controller=tareasController&action=mostrarTareas">Ver Tareas</a>
-                    <a class="nav-link" href="index.php?controller=tareasController&action=mostrarTareasPendientes">Ver Tareas Pendientes</a>
-                    <a class="nav-link" href="index.php?controller=tareasController&action=añadirTarea">Añadir tarea</a>
+                    <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::mostrarTareas">Ver Tareas</a>
+                    <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::mostrarTareasPendientes">Ver Tareas Pendientes</a>
+                    <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::añadirTarea">Añadir tarea</a>
                 </div>
             </div>
         </div>

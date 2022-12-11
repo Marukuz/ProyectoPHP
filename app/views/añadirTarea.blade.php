@@ -47,7 +47,7 @@
                 <option>David</option>
             </select><br>
 
-            Fecha: {!!$error->ErrorFormateado("fecha")!!}<br>
+            Fecha Realizacion: {!!$error->ErrorFormateado("fecha")!!}<br>
             <input type="date" class="form-control" name="fecha" value="{{$tareas[10] ?? ''}}"><br>
 
             Descripcion: {!!$error->ErrorFormateado("descripcion")!!}<br>

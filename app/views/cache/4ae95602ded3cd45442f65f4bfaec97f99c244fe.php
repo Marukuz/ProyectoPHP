@@ -39,10 +39,10 @@
             </select><br>
 
             Estado Tarea: <br>
-            <input class="form-check-input" type="radio" name="estado" id="flexRadioDefault1"> B |
-            <input class="form-check-input" type="radio" name="estado" id="flexRadioDefault1"> P |
-            <input class="form-check-input" type="radio" name="estado" id="flexRadioDefault1"> R |
-            <input class="form-check-input" type="radio" name="estado" id="flexRadioDefault1"> C
+            <input class="form-check-input" type="radio" name="estado" value="B"> B |
+            <input class="form-check-input" type="radio" name="estado" value="P"> P |
+            <input class="form-check-input" type="radio" name="estado" value="R"> R |
+            <input class="form-check-input" type="radio" name="estado" value="C"> C
             <br><br>
             Fecha creacion: <br>
             <input readonly type="date" class="form-control" name="fechac" value="<?php echo e($tarea['fecha_creacion'] ?? ''); ?>" readonly><br>

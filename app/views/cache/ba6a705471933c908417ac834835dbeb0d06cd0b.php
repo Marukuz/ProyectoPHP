@@ -48,7 +48,7 @@
                 <option>David</option>
             </select><br>
 
-            Fecha: <?php echo $error->ErrorFormateado("fecha"); ?><br>
+            Fecha Realizacion: <?php echo $error->ErrorFormateado("fecha"); ?><br>
             <input type="date" class="form-control" name="fecha" value="<?php echo e($tareas[10] ?? ''); ?>"><br>
 
             Descripcion: <?php echo $error->ErrorFormateado("descripcion"); ?><br>

@@ -7,7 +7,7 @@ define ('CONTROLLERS_FOLDER', "controllers/");
 define ('DEFAULT_CONTROLLER', "tareasController");
 
  //Si no se indica una acción, esta acción es la que se usará
-define ('DEFAULT_ACTION', "login");
+define ('DEFAULT_ACTION', "Tareas::login");
 
 //Obtenemos el controlador.
 //Si el usuario no lo introduce, seleccionamos el de por defecto.
