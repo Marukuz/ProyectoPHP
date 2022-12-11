@@ -123,4 +123,14 @@ function eliminarTarea(){
         'mostrarTareas'=>$mostrarTareas
     ]);
 }
-
+function completarTarea(){
+    require('models/Consultas.php');
+    require('models/blade.php');
+    
+    $id = $_GET['id'];
+    $tarea = Consultas::mostrarTareaCompleta($id);
+    echo $blade->render('completarTarea',[
+        'tarea'=>$tarea
+    ]);
+    
+}

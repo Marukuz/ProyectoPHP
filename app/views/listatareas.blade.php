@@ -35,7 +35,9 @@
           <td>{{ $tareas['fecha_realizacion'] }}</td>
           <td><a href="index.php?controller=tareasController&action=mostrarTareaCompleta&id={{$tareas['tarea_id']}}"><button>Ver</button></a>
           <a href="index.php?controller=tareasController&action=modificarTarea&id={{$tareas['tarea_id']}}"><button>Modificar</button></a>
-          <a href="index.php?controller=tareasController&action=eliminarTareaVista&id={{$tareas['tarea_id']}}"><button>Eliminar</button></td>
+          <a href="index.php?controller=tareasController&action=eliminarTareaVista&id={{$tareas['tarea_id']}}"><button>Eliminar</button></a>
+          <a href="index.php?controller=tareasController&action=completarTarea&id={{$tareas['tarea_id']}}"><button>Completar</button></a></td>
+          
         </tr>
         @endforeach
       </tbody>
