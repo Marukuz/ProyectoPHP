@@ -10,7 +10,7 @@ class Tareas{
         require('models/blade.php');
         $mostrarTareas = ConsultasTareas::mostrarTareas();
         //Incluimos vista
-        echo $blade->render('listatareas', [
+        echo $blade->render('listaTareas', [
             'mostrarTareas'=>$mostrarTareas        
         ]);
     }
@@ -18,7 +18,7 @@ class Tareas{
         require('models/ConsultasTareas.php');
         require('models/blade.php');
         $mostrarTareasPendientes = ConsultasTareas::mostrarTareasPendientes();
-        echo $blade->render('listatareaspendientes', [
+        echo $blade->render('listaTareasPendientes', [
             'mostrarTareasPendientes'=>$mostrarTareasPendientes       
         ]);
     }
@@ -118,7 +118,7 @@ class Tareas{
         ConsultasTareas::eliminarTarea($id);
         $mostrarTareas = ConsultasTareas::mostrarTareas();
     
-        echo $blade->render('listatareas',[
+        echo $blade->render('listaTareas',[
             'mostrarTareas'=>$mostrarTareas
         ]);
     }

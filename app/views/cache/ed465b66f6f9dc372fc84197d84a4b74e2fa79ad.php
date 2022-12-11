@@ -37,4 +37,4 @@
     </div>
   </div>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('plantilla', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\marcc\OneDrive\Escritorio\ProyectoPHP_blade\app\views/eliminarTarea.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('plantillaTareas', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\marcc\OneDrive\Escritorio\ProyectoPHP_blade\app\views/eliminarTarea.blade.php ENDPATH**/ ?>

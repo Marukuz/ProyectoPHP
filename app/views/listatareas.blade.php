@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('plantillaTareas')
 @section('contenido')
   <div> 
     <table class="table">
@@ -33,10 +33,10 @@
           <td>{{ $tareas['descripcion'] }}</td>
           <td>{{ $tareas['anotacion_inicio'] }}</td>
           <td>{{ $tareas['fecha_realizacion'] }}</td>
-          <td><a href="index.php?controller=tareasController&action=Tareas::mostrarTareaCompleta&id={{$tareas['tarea_id']}}"><button>Ver</button></a>
-          <a href="index.php?controller=tareasController&action=Tareas::modificarTarea&id={{$tareas['tarea_id']}}"><button>Modificar</button></a>
-          <a href="index.php?controller=tareasController&action=Tareas::eliminarTareaVista&id={{$tareas['tarea_id']}}"><button>Eliminar</button></a>
-          <a href="index.php?controller=tareasController&action=Tareas::completarTarea&id={{$tareas['tarea_id']}}"><button>Completar</button></a></td>
+          <td><a href="index.php?controller=tareasController&action=Tareas::mostrarTareaCompleta&id={{$tareas['tarea_id']}}"><button class="btn btn-success">Ver</button></a>
+          <a href="index.php?controller=tareasController&action=Tareas::modificarTarea&id={{$tareas['tarea_id']}}"><button class="btn btn-warning">Modificar</button></a>
+          <a href="index.php?controller=tareasController&action=Tareas::eliminarTareaVista&id={{$tareas['tarea_id']}}"><button class="btn btn-danger">Eliminar</button></a>
+          <a href="index.php?controller=tareasController&action=Tareas::completarTarea&id={{$tareas['tarea_id']}}"><button class="btn btn-info">Completar</button></a></td>
           
         </tr>
         @endforeach

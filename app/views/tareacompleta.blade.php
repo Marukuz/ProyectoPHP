@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('plantillaTareas')
 @section('contenido')
 
 <div>

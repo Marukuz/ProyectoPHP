@@ -15,12 +15,14 @@
             <a class="navbar-brand" href="#">Inicio</a>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::mostrarTareas">Ver Tareas</a>
-                    <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::mostrarTareasPendientes">Ver Tareas Pendientes</a>
-                    <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::añadirTarea">Añadir tarea</a>
+                    <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::mostrarTareas">Listar Usuarios</a>
+                    <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::mostrarTareas">Añadir Usuario</a>
+                    <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::mostrarTareasPendientes">Eliminar Usuario</a>
+                    <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::añadirTarea">Editar Usuario</a>
                 </div>
             </div>
-            <a class="nav-link" href="index.php?controller=usuariosController&action=Usuarios::desloguearse"><button>Log Out</button></a>
+            <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::mostrarTareas"><button class="btn btn-primary">Tareas</button></a>&nbsp&nbsp
+            <a class="nav-link" href="index.php?controller=usuariosController&action=Usuarios::loguearse"><button class="btn btn-danger">Log Out</button></a>
         </div>
     </nav>
 </header>

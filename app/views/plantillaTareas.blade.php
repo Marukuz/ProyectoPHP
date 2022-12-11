@@ -20,6 +20,7 @@
                     <a class="nav-link" href="index.php?controller=tareasController&action=Tareas::añadirTarea">Añadir tarea</a>
                 </div>
             </div>
+            <a class="nav-link" href="index.php?controller=usuariosController&action=Usuarios::verUsuarios"><button class="btn btn-primary">Usuarios</button></a>&nbsp&nbsp
             <a class="nav-link" href="index.php?controller=usuariosController&action=Usuarios::loguearse"><button class="btn btn-danger">Log Out</button></a>
         </div>
     </nav>
@@ -28,7 +29,7 @@
 <body>
 
 
-    <?php echo $__env->yieldContent('contenido'); ?>
+    @yield('contenido')
 
 
     <footer class="bg-light text-center text-white">
@@ -45,4 +46,4 @@
 
 </body>
 
-</html><?php /**PATH C:\Users\marcc\OneDrive\Escritorio\ProyectoPHP_blade\app\views/plantilla.blade.php ENDPATH**/ ?>
+</html>

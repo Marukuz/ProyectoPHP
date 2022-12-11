@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('plantillaTareas')
 @section('contenido')
     <h1 style="text-align: center;">Modificar tarea</h1><br>
     <div id="formulario" >

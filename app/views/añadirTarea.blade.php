@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('plantillaTareas')
 @section('contenido')   
     <br>
     <h1 style="text-align: center;">Añadir tarea</h1><br>

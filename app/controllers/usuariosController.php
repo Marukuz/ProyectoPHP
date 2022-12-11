@@ -10,9 +10,6 @@ class Usuarios{
         if($_POST){
             if(ConsultasUsuarios::getUsuario($_POST['usuario'],$_POST['password'])){
                 $mostrarTareas = ConsultasTareas::mostrarTareas();
-                session_start();
-                $_SESSION['nombre'] = $_POST['usuario'];
-                $_SESSION['fecha'] = time();
                 echo $blade->render('listatareas', [
                 'mostrarTareas'=>$mostrarTareas        
                 ]);
@@ -24,10 +21,10 @@ class Usuarios{
             echo $blade->render('login');
         }     
     }
-    public static function desloguearse(){
+
+    public static function verUsuarios(){
         require('models/blade.php');
-        session_start();
-        session_destroy();
-        echo $blade->render('login');
+
+        echo $blade->render('listausuarios');
     }
 }
