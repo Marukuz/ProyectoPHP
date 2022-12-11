@@ -1,7 +1,19 @@
 <?php
 
-class Validaciones
-{
+/**
+ * Validaciones
+ * 
+ * Clase de validaciones 
+ */
+class Validaciones{
+        
+    /**
+     * validarVacio
+     *
+     * Validamos el parametro recibido y comprobamos si esta vacio o no.
+     * @param  mixed $valor
+     * @return void
+     */
     public static function validarVacio($valor){
         if(empty($valor)){
             return true;
@@ -9,6 +21,14 @@ class Validaciones
             return false;
         }
     }
+        
+    /**
+     * validarCodigop
+     *
+     * Validamos mediante expresion regulares que el codigo postal sea correcto
+     * @param  mixed $codigop
+     * @return void
+     */
     public static function validarCodigop($codigop)
     {
         $pattern = '/^([0-9]{5})$/';
@@ -21,6 +41,14 @@ class Validaciones
             return false;
         }
     }
+        
+    /**
+     * validarCorreo
+     *
+     * Validamos mediante expresiones regulares que el correo sea correcto.
+     * @param  mixed $correo
+     * @return void
+     */
     public static function validarCorreo($correo)
     {
         $pattern = '/^[A-z0-9\\._-]+@[A-z0-9][A-z0-9-]*(\\.[A-z0-9_-]+)*\\.([A-z]{2,6})$/';
@@ -34,7 +62,14 @@ class Validaciones
         }
     }
 
-
+    
+    /**
+     * ValidarDNI
+     *
+     * Validamos mediante expresiones regulares que el dni sea correcto.
+     * @param  mixed $dni
+     * @return void
+     */
     public static function ValidarDNI($dni)
     {
         $letter = substr($dni, -1);
@@ -45,6 +80,14 @@ class Validaciones
         }
         return false;
     }
+        
+    /**
+     * validarNombreYApellido
+     *
+     * Validamos mediante expresiones regulares que el nombre y apellido sea correcto.
+     * @param  mixed $c
+     * @return void
+     */
     public static function validarNombreYApellido($c)
     {
         $pattern = "/^[a-z]+$/i";
@@ -56,7 +99,14 @@ class Validaciones
 
             return false;
         }
-    }
+    }    
+    /**
+     * validarTelefono
+     *
+     * Validamos mediante expresiones regulares que el telefono sea correcto de diferentes formas.
+     * @param  mixed $numero
+     * @return void
+     */
     public static function validarTelefono($numero)
     {
 
@@ -71,6 +121,29 @@ class Validaciones
             return false;
         }
     }
+        
+    /**
+     * filtradoTareas
+     *
+     * 
+     * Funcion que nos filtra todos los parametros de una tarea que recibe y si es asi añadimos el error al parametro error
+     * Para ser mostrado cuando sea necesario.
+     * 
+     * @param  mixed $error
+     * @param  mixed $dni
+     * @param  mixed $nombre
+     * @param  mixed $apellido
+     * @param  mixed $correo
+     * @param  mixed $telefono
+     * @param  mixed $direccion
+     * @param  mixed $poblacion
+     * @param  mixed $codigop
+     * @param  mixed $provincia
+     * @param  mixed $operario
+     * @param  mixed $fecha
+     * @param  mixed $descripcion
+     * @param  mixed $anotacioni
+     */
     public static function filtradoTareas($error,$dni,$nombre,$apellido,$correo,$telefono,$direccion,$poblacion,$codigop,$provincia,$operario,$fecha,$descripcion,$anotacioni){
     
         if(self::validarVacio($dni)){
@@ -127,6 +200,17 @@ class Validaciones
         }
         return $error;
     }
+        
+    /**
+     * filtradoUsuarios
+     *
+     * Funcion que nos filtra todos los parametros de un usuario que recibe y si es asi añadimos el error al parametro error
+     * Para ser mostrado cuando sea necesario.
+     * @param  mixed $error
+     * @param  mixed $nombre
+     * @param  mixed $contrase
+     * @param  mixed $rol
+     */
     public static function filtradoUsuarios($error,$nombre,$contraseña,$rol){
     
         if(self::validarVacio($nombre)){
