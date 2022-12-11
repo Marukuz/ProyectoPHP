@@ -61,4 +61,27 @@ class Usuarios{
             ]);
         }
     }
+    public static function eliminarUsuarioVista(){
+        require('models/ConsultasUsuarios.php');
+        require('models/blade.php');
+        
+        $id = $_GET['id'];
+        $usuario = ConsultasUsuarios::mostrarUsuarioID($id);
+
+        echo $blade->render('eliminarUsuario', [
+            'usuario'=>$usuario        
+        ]);
+    }
+    
+    public static function eliminarUsuario(){
+        require('models/ConsultasUsuarios.php');
+        require('models/blade.php');
+        $id = $_GET['id'];
+        ConsultasUsuarios::eliminarUsuario($id);
+        $mostrarUsuarios = ConsultasUsuarios::verUsuarios();
+        
+        echo $blade->render('listausuarios',[
+            'usuarios'=>$mostrarUsuarios
+        ]);
+    }
 }

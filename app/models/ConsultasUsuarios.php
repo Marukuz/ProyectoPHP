@@ -27,4 +27,17 @@ class ConsultasUsuarios{
         $result =$base->base->prepare($sql);
         $result -> execute();
     }
+    public static function mostrarUsuarioID($id){
+        $base = Conexion::getInstance();
+        $sql="SELECT * FROM usuarios WHERE usuario_id='$id'";
+        $result = $base->base->prepare($sql);
+        $result -> execute();
+        return $result->fetch(PDO::FETCH_ASSOC);
+    }
+    public static function eliminarUsuario($id){        
+        $base = Conexion::getInstance();
+        $sql="DELETE FROM usuarios WHERE usuario_id='$id'";
+        $result = $base->base->prepare($sql);
+        $result -> execute();
+    }
 }

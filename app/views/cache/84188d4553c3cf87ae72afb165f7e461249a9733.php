@@ -18,8 +18,8 @@
           <td><?php echo e($usuario['nombre']); ?></td>
           <td><?php echo e($usuario['contraseña']); ?></td>
           <td><?php echo e($usuario['rol']); ?></td>
-          <td><a href="index.php?controller=tareasController&action=Tareas::mostrarTareaCompleta&id=<?php echo e($tareas['tarea_id']); ?>"><button class="btn btn-danger">Eliminar</button></a>
-          <a href="index.php?controller=tareasController&action=Tareas::modificarTarea&id=<?php echo e($tareas['tarea_id']); ?>"><button class="btn btn-warning">Modificar</button></a></td>
+          <td><a href="index.php?controller=usuariosController&action=Usuarios::eliminarUsuarioVista&id=<?php echo e($usuario['usuario_id']); ?>"><button class="btn btn-danger">Eliminar</button></a>
+          <a href="index.php?controller=usuariosController&action=Usuarios::modificarUsuario&id=<?php echo e($usuario['usuario_id']); ?>"><button class="btn btn-warning">Modificar</button></a></td>
         </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
       </tbody>

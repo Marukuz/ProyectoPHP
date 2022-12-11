@@ -3,26 +3,25 @@
   <div> 
     <table class="table">
       <thead>
+      <h1 style="text-align: center;">Quiere eliminar al siguiente Usuario?</h1>
+      <br>
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Nombre</th>
           <th scope="col">Contraseña</th>
           <th scope="col">Rol</th>
-          <th scope="col"></th>
         </tr>
       </thead>
-      <tbody>
-      @foreach($usuarios as $usuario) 
         <tr>
           <td>{{ $usuario['usuario_id'] }}</td>
           <td>{{ $usuario['nombre'] }}</td>
           <td>{{ $usuario['contraseña'] }}</td>
           <td>{{ $usuario['rol'] }}</td>
-          <td><a href="index.php?controller=usuariosController&action=Usuarios::eliminarUsuarioVista&id={{$usuario['usuario_id']}}"><button class="btn btn-danger">Eliminar</button></a>
-          <a href="index.php?controller=usuariosController&action=Usuarios::modificarUsuario&id={{$usuario['usuario_id']}}"><button class="btn btn-warning">Modificar</button></a></td>
         </tr>
-        @endforeach
-      </tbody>
     </table>
+    <div style="text-align: center;">
+        <a href="index.php?controller=usuariosController&action=Usuarios::eliminarUsuario&id={{$usuario['usuario_id']}}"><button class="btn btn-danger">Si</button></a>
+        <a href="index.php?controller=usuariosController&action=Usuarios::verUsuarios"><button class="btn btn-success">No</button></a>
+    </div>
   </div>
 @endsection
