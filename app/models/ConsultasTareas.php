@@ -84,7 +84,7 @@ class ConsultasTareas{
         $base = Conexion::getInstance();
         $fechaactual = strval(date('Y-m-d'));
         $sql = "INSERT INTO tareas (`tarea_id`, `dni`, `nombre`, `apellido`, `telefono`, `correo`, `direccion`, `poblacion`, `codigo_postal`, `provincia`, `estado_tarea`, `fecha_creacion`, `operario_encargado`,`fecha_realizacion`,`descripcion`,`anotacion_inicio`,`anotacion_final`) 
-        VALUES(NULL,'$dni','$nombre','$apellido','$telefono','$correo','$direccion','$poblacion','$codigop','$provincia','B','$fechaactual','$operario','$fecha','$descripcion','$anotacioni',NULL)";
+        VALUES(NULL,'$dni','$nombre','$apellido',$telefono,'$correo','$direccion','$poblacion',$codigop,'$provincia','B','$fechaactual','$operario','$fecha','$descripcion','$anotacioni',NULL)";
         $result = $base ->base->prepare($sql);
         $result -> execute();
     }
@@ -114,7 +114,7 @@ class ConsultasTareas{
      */
     public static function modificarTarea($id,$dni,$nombre,$apellido,$telefono,$correo,$direccion,$poblacion,$codigop,$provincia,$estado,$operario,$fecha_realizacion,$descripcion,$anotacioni,$anotacionf){
         $base = Conexion::getInstance();
-        $sql="UPDATE tareas SET tarea_id='$id', dni='$dni', nombre='$nombre', apellido='$apellido', telefono='$telefono', correo='$correo', direccion='$direccion', poblacion='$poblacion', codigo_postal='$codigop', provincia='$provincia', estado_tarea='$estado', operario_encargado='$operario', fecha_realizacion='$fecha_realizacion',descripcion='$descripcion', anotacion_inicio='$anotacioni', anotacion_final='$anotacionf' WHERE tarea_id='$id'";
+        $sql="UPDATE tareas SET tarea_id='$id', dni='$dni', nombre='$nombre', apellido='$apellido', telefono=$telefono, correo='$correo', direccion='$direccion', poblacion='$poblacion', codigo_postal=$codigop, provincia='$provincia', estado_tarea='$estado', operario_encargado='$operario', fecha_realizacion='$fecha_realizacion',descripcion='$descripcion', anotacion_inicio='$anotacioni', anotacion_final='$anotacionf' WHERE tarea_id='$id'";
         $result =$base->base->prepare($sql);
         $result -> execute();
     }
