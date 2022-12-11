@@ -1,9 +1,17 @@
 <?php
 
+/**
+ * Tareas
+ * 
+ * Clase donde almacenamos todas las funciones de las tareas.
+ */
 class Tareas{
-
     
-    
+    /**
+     * mostrarTareas
+     * Aqui renderizamos la vista y pasamos por parametro las tareas existentes.
+     * @return void
+     */
     public static function mostrarTareas(){
         //Incluimos modelo
         require('models/ConsultasTareas.php');
@@ -14,6 +22,12 @@ class Tareas{
             'mostrarTareas'=>$mostrarTareas        
         ]);
     }
+        
+    /**
+     * mostrarTareasPendientes
+     * Aqui renderizamos la vista y pasamos por parametro las tareas que estan pendientes.
+     * @return void
+     */
     public static function mostrarTareasPendientes(){
         require('models/ConsultasTareas.php');
         require('models/blade.php');
@@ -22,7 +36,12 @@ class Tareas{
             'mostrarTareasPendientes'=>$mostrarTareasPendientes       
         ]);
     }
-    
+        
+    /**
+     * mostrarTareaCompleta
+     * Aqui renderizamos la vista y pasamos por parametro una tarea completa en concreto.
+     * @return void
+     */
     public static function mostrarTareaCompleta(){
         require('models/ConsultasTareas.php');
         require('models/blade.php');
@@ -32,7 +51,13 @@ class Tareas{
             'mostrarTareaCompleta'=>$mostrarTareaCompleta       
         ]);
     }
-    
+        
+    /**
+     * modificarTarea
+     *
+     * Aqui renderizamos la vista y filtramos los datos que nos llegan para seguidamente modificarlos en la BBDD.
+     * @return void
+     */
     public static function modificarTarea(){
         require('models/ConsultasTareas.php');
         require('models/blade.php');
@@ -64,7 +89,13 @@ class Tareas{
         }
         
     }
-    
+        
+    /**
+     * añadirTarea
+     *
+     * Aqui renderizamos la vista y filtramos los datos que nos llegan para seguidamente añadirlos a la BBDD.
+     * @return void
+     */
     public static function añadirTarea(){
         //Incluimos modelo
         require('models/ConsultasTareas.php');
@@ -97,6 +128,13 @@ class Tareas{
             ]);
         }
     }
+        
+    /**
+     * eliminarTareaVista
+     *
+     * Aqui renderizamos la vista y pasamos por parametro la tarea que hemos seleccionado por id para seguidamente mostrarla.
+     * @return void
+     */
     public static function eliminarTareaVista(){
         require('models/ConsultasTareas.php');
         require('models/blade.php');
@@ -108,7 +146,13 @@ class Tareas{
             'tarea'=>$tarea        
         ]);
     }
-    
+        
+    /**
+     * eliminarTarea
+     *
+     * Aqui cojemos el parametro "id" si anteriormente hemos activado la funcion para eliminar la tarea de la misma id.
+     * @return void
+     */
     public static function eliminarTarea(){
         require('models/ConsultasTareas.php');
         require('models/blade.php');
@@ -122,6 +166,13 @@ class Tareas{
             'mostrarTareas'=>$mostrarTareas
         ]);
     }
+        
+    /**
+     * completarTarea
+     *
+     * 
+     * @return void
+     */
     public static function completarTarea(){
         require('models/ConsultasTareas.php');
         require('models/blade.php');
