@@ -19,6 +19,7 @@
         </tr>
       </thead>
         <tr>
+          <!-- Generacion de la tabla -->
           <td>{{ $tarea['tarea_id'] }}</td>
           <td>{{ $tarea['nombre'] }}</td>
           <td>{{ $tarea['apellido'] }}</td>

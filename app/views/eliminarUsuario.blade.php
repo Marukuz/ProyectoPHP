@@ -13,6 +13,7 @@
         </tr>
       </thead>
         <tr>
+          <!-- Generacion de la tabla -->
           <td>{{ $usuario['usuario_id'] }}</td>
           <td>{{ $usuario['nombre'] }}</td>
           <td>{{ $usuario['contraseña'] }}</td>

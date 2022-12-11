@@ -20,6 +20,7 @@
         </tr>
       </thead>
       <tbody>
+          <!-- Generacion de la tabla -->
           @foreach($mostrarTareas as $tareas) 
         <tr>
           <td>{{ $tareas['tarea_id'] }}</td>

@@ -17,6 +17,7 @@
         </tr>
       </thead>
       <tbody>
+          <!-- Generacion de la tabla -->
           @foreach($mostrarTareasPendientes as $tareas) 
         <tr>
           <td>{{ $tareas['tarea_id'] }}</td>
