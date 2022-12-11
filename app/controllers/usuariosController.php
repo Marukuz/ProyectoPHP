@@ -11,7 +11,7 @@ class Usuarios{
     /**
      * loguearse
      *
-     * Funcion para la vista loguin que identifica si el usuario y 
+     * Funcion para la vista login que identifica si el usuario y 
      * contraseña introducido es valido y renderiza la vista correspondiente
      * @return void
      */
@@ -22,6 +22,7 @@ class Usuarios{
         require('models/blade.php');
         if($_POST){
             if(ConsultasUsuarios::getUsuario($_POST['usuario'],$_POST['password'])){
+                
                 $mostrarTareas = ConsultasTareas::mostrarTareas();
                 echo $blade->render('listatareas', [
                 'mostrarTareas'=>$mostrarTareas        
