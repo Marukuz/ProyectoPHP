@@ -170,7 +170,7 @@ class Tareas{
     /**
      * completarTarea
      *
-     * 
+     * Renderizamos la vista y modificamos los parametros recibidos via $_POST
      * @return void
      */
     public static function completarTarea(){
@@ -181,7 +181,6 @@ class Tareas{
         $tarea = ConsultasTareas::mostrarTareaCompleta($id);
         if($_POST){
             ConsultasTareas::completarTarea($id,$_POST["estado"],$_POST["anotacioni"],$_POST["anotacionf"]);
-
         }else{
             echo $blade->render('completarTarea',[
                 'tarea'=>$tarea
