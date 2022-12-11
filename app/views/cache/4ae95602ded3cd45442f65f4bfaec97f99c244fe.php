@@ -67,9 +67,11 @@
             <textarea class="form-control" name="anotacioni" ><?php echo e($tarea['anotacion_inicio']); ?></textarea><br>
 
             Anotacion final: <br>
-            <textarea class="form-control" name="anotacionf" ><?php echo e($tarea['anotacion_final']); ?></textarea>
+            <textarea class="form-control" name="anotacionf" ><?php echo e($tarea['anotacion_final']); ?></textarea><br>
 
-            <input type="submit" class="btn btn-primary" value="Modificar">
+            <div style="text-align: center;">
+                <input type="submit" class="btn btn-primary" value="Modificar">
+            </div>
         </form>
     </div>
 </body>

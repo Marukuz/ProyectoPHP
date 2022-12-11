@@ -91,4 +91,13 @@ class ConsultasUsuarios{
         $result = $base->base->prepare($sql);
         $result -> execute();
     }
+
+    public static function modificarUsuario($id,$nombre,$contraseña,$rol){
+        $base = Conexion::getInstance();
+        $sql="UPDATE usuarios SET usuario_id='$id', nombre='$nombre',contraseña='$contraseña',rol='$rol' WHERE usuario_id='$id'";
+        $result = $base->base->prepare($sql);
+        $result -> execute();
+        return $result->fetch(PDO::FETCH_ASSOC);
+
+    }
 }

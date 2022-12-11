@@ -17,7 +17,9 @@
                 <option>Operario</option>
             </select><br>
 
-            <button type="submit" class="btn btn-primary">Añadir</button>
+            <div style="text-align: center;">
+                <button type="submit" class="btn btn-primary">Añadir</button>
+            </div>
         </form>
     </div>
 @endsection

@@ -5,10 +5,12 @@
         <form method="post">
             ID Tarea: <br>
             <input type="text" class="form-control" name="id" value="{{$tarea['tarea_id'] ?? ''}}" readonly><br>
-
+            
+            <!-- Mostramos con blade los errores -->
             DNI: {!!$error->ErrorFormateado("dni")!!} <br>
             <input type="text" class="form-control" name="dni" value="{{$tarea['dni'] ?? ''}}"><br>
 
+            
             Nombre:  {!!$error->ErrorFormateado("nombre")!!}<br>
             <input type="text" class="form-control" name="nombre" value="{{$tarea['nombre'] ?? ''}}"><br>
 
@@ -71,8 +73,10 @@
 
             Anotacion final: <br>
             <textarea class="form-control" name="anotacionf" >{{$tarea['anotacion_final']}}</textarea>
-
-            <input type="submit" class="btn btn-primary" value="Modificar">
+            <br>
+            <div style="text-align: center;">
+                <input type="submit" class="btn btn-primary" value="Modificar">
+            </div>
         </form>
     </div>
 </body>

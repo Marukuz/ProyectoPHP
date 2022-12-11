@@ -35,8 +35,7 @@
                 <option>{{$provincia['nombre']}}</option>
                 @endforeach
             </select><br>
-            <!-- FECHA DE CREACION AUTOMATICA?-->
-            <!-- Los operarios los cojeremos de la BBDD o otro lugar.-->
+     
             Operario encargado: {!!$error->ErrorFormateado("operario")!!}<br>
             <select class="form-select" name="operario">
                 <option disabled selected>Selecciona</option>
@@ -56,7 +55,9 @@
             Anotacion Inicial: {!!$error->ErrorFormateado("anotacioni")!!}<br>
             <textarea class="form-control" name="anotacioni" value="{{$tareas[12] ?? ''}}"></textarea><br>
             
-            <button type="submit" class="btn btn-primary">Añadir</button>
+            <div style="text-align: center;">
+                <button type="submit" class="btn btn-primary">Añadir</button>
+            </div>
         </form>
     </div>
 @endsection

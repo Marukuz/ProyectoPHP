@@ -36,8 +36,7 @@
                 <option><?php echo e($provincia['nombre']); ?></option>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </select><br>
-            <!-- FECHA DE CREACION AUTOMATICA?-->
-            <!-- Los operarios los cojeremos de la BBDD o otro lugar.-->
+     
             Operario encargado: <?php echo $error->ErrorFormateado("operario"); ?><br>
             <select class="form-select" name="operario">
                 <option disabled selected>Selecciona</option>
@@ -57,7 +56,9 @@
             Anotacion Inicial: <?php echo $error->ErrorFormateado("anotacioni"); ?><br>
             <textarea class="form-control" name="anotacioni" value="<?php echo e($tareas[12] ?? ''); ?>"></textarea><br>
             
-            <button type="submit" class="btn btn-primary">Añadir</button>
+            <div style="text-align: center;">
+                <button type="submit" class="btn btn-primary">Añadir</button>
+            </div>
         </form>
     </div>
 <?php $__env->stopSection(); ?>

@@ -124,4 +124,34 @@ class Usuarios{
             'usuarios'=>$mostrarUsuarios
         ]);
     }
+
+    public static function modificarUsuario(){
+        require('models/ConsultasUsuarios.php');
+        require('models/blade.php');
+        require('models/gestorerrores.php');
+        require('validaciones.php');
+
+        $id = $_GET['id'];
+
+        $usuario = ConsultasUsuarios::mostrarUsuarioID($id);
+        $error=new GestorErrores('<span style="color: red;">','</span>');
+
+        if($_POST){
+            Validaciones::filtradoUsuarios($error,$_POST['nombre'],$_POST['contraseña'],filter_input(INPUT_POST,'rol'));
+            if(!$error->HayErrores()){
+                ConsultasUsuarios::modificarUsuario($id,$_POST["nombre"],$_POST["contraseña"],filter_input(INPUT_POST,'rol'));
+                echo $blade->render('modificarUsuario',[
+                    'usuario'=>$usuario, 'error'=>$error,'usuario'=>$usuario
+                ]);
+            }else{
+                echo $blade->render('modificarUsuario',[
+                    'usuario'=>$usuario, 'error'=>$error,'usuario'=>$usuario
+                ]);
+            }
+        }else{
+            echo $blade->render('modificarUsuario',[
+                'usuario'=>$usuario, 'error'=>$error,'usuario'=>$usuario
+            ]);
+        }
+    }
 }
