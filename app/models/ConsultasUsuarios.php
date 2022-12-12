@@ -20,7 +20,7 @@ class ConsultasUsuarios{
      */
     public static function getUsuario($nombre,$contraseña){
         $base = Conexion::getInstance();
-        $sql="SELECT * FROM usuarios WHERE nombre='$nombre' AND contraseña='$contraseña'";
+        $sql="SELECT * FROM usuarios WHERE nombre='$nombre' AND pass='$contraseña'";
         $result =$base->base->prepare($sql);
         $result -> execute();
         return $result->fetch(PDO::FETCH_ASSOC);
@@ -57,7 +57,7 @@ class ConsultasUsuarios{
      */
     public static function añadirUsuario($nombre,$password,$rol){
         $base = Conexion::getInstance();
-        $sql="INSERT INTO `usuarios`(`usuario_id`,`nombre`, `contraseña`, `rol`) VALUES (NULL,'$nombre','$password','$rol')";
+        $sql="INSERT INTO `usuarios`(`usuario_id`,`nombre`, `pass`, `rol`) VALUES (NULL,'$nombre','$password','$rol')";
         $result =$base->base->prepare($sql);
         $result -> execute();
     }
@@ -104,7 +104,7 @@ class ConsultasUsuarios{
      */
     public static function modificarUsuario($id,$nombre,$contraseña,$rol){
         $base = Conexion::getInstance();
-        $sql="UPDATE usuarios SET usuario_id='$id', nombre='$nombre',contraseña='$contraseña',rol='$rol' WHERE usuario_id='$id'";
+        $sql="UPDATE usuarios SET usuario_id='$id', nombre='$nombre',pass='$contraseña',rol='$rol' WHERE usuario_id='$id'";
         $result = $base->base->prepare($sql);
         $result -> execute();
         return $result->fetch(PDO::FETCH_ASSOC);
